@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Vehicle Weather Shield",
+        "description": "Configureer voertuigweerbescherming",
+        "data": {
+          "vehicle_name": "Voertuignaam"
+        }
+      }
+    }
+  }
+}
