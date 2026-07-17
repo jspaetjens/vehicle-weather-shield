@@ -1,0 +1,8 @@
+{
+  "name": "Vehicle Weather Shield",
+  "content_in_root": false,
+  "domains": [
+    "vehicle_weather_shield"
+  ],
+  "homeassistant": "2025.1.0"
+}
