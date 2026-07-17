@@ -2,7 +2,7 @@
   "domain": "vehicle_weather_shield",
   "name": "Vehicle Weather Shield",
   "version": "0.1.0",
-  "documentation": "https://github.com/JOUWGITHUBNAAM/vehicle-weather-shield",
+  "documentation": "https://github.com/jspaetjens/vehicle-weather-shield",
   "requirements": [],
   "dependencies": [],
   "codeowners": [
