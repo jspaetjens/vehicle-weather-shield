@@ -1,13 +1,20 @@
 # Vehicle Weather Shield
 
-Home Assistant integration for vehicle weather protection.
+Vehicle Weather Shield is an open-source Home Assistant integration that helps protect vehicles from severe weather.
 
-## Features
+## Planned Features
 
-- Severe weather detection
-- Vehicle status monitoring
-- Weather risk scoring
+- 🚗 Vehicle detection (Tesla first)
+- 🌧 Rain radar integration
+- ⚡ Lightning detection
+- 🧊 Hail risk calculation
+- 📱 Mobile notifications
+- 📊 Lovelace dashboard
 
-## Supported vehicles
+## Status
 
-- Tesla (planned)
+🚧 Early development
+
+## License
+
+MIT
