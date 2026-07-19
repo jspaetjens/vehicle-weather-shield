@@ -16,7 +16,7 @@
 
 | Version | Date | Author | Description |
 |----------|------|--------|-------------|
-| 0.1 | 2026-07-19 | Jasper Spaetjens | Initial draft |
+| 0.1 | 2026-07-19 | Jack Spaetjens | Initial draft |
 
 ---
 
