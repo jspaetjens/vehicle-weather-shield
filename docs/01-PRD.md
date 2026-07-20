@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.1 (Draft)
+**Version:** 0.2 (Draft)
 
 **Status:** Draft
 
@@ -8,26 +8,24 @@
 
 **License:** MIT
 
-**Author:** Jasper Spaetjens
+**Author:** Jack Spaetjens
 
-**Last Updated:** 2026-07-19
+**Last Updated:** 2026-07-20
 
 ## Document History
 
 | Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 0.1 | 2026-07-19 | Jack Spaetjens | Initial draft |
-
+|----------|------------|----------------|----------------------------------------------|
+| 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure |
+| 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases |
 ---
-
 # 1. Introduction
-
-Vehicle Weather Shield is a Home Assistant integration designed to help vehicle owners protect their vehicles against severe weather conditions.
-
-The integration combines multiple weather providers, intelligent risk assessment and Home Assistant automations to provide timely warnings and actionable information.
 
 Vehicle Weather Shield is designed to provide reliable early warnings that help vehicle owners protect their vehicles against severe weather.
 
+The integration combines multiple weather providers, intelligent risk assessment and Home Assistant automations to provide timely warnings and actionable information.
+
+---
 # 2. Vision
 
 Vehicle Weather Shield was inspired by the increasing frequency and impact of severe weather events across Europe.
@@ -40,6 +38,7 @@ The long-term vision is to become a trusted Home Assistant integration for vehic
 
 > Every minute of early warning increases the opportunity for vehicle owners to move their vehicle to safety before severe weather arrives.
 
+---
 # 3. Goals
 
 The first public release focuses on solving one specific problem:
@@ -53,6 +52,7 @@ To achieve this, version 1.0 will focus on the following goals:
 4. Integration with Home Assistant automations.
 5. Easy installation through HACS.
 
+---
 # 4. Scope
 
 ## In Scope (Version 1.0)
@@ -89,6 +89,7 @@ Although Vehicle Weather Shield initially focuses on Tesla vehicles, the long-te
 
 The project welcomes contributions from developers who want to add support for additional weather providers, vehicle manufacturers and new protective automation scenarios.
 
+---
 # 5. Stakeholders
 
 The following stakeholders are identified for Vehicle Weather Shield.
@@ -101,11 +102,10 @@ The following stakeholders are identified for Vehicle Weather Shield.
 | Future Contributors | Need clear documentation, coding standards and an understandable architecture. |
 | Open Source Community | Wants to contribute new features, providers and vehicle integrations. |
 
+---
 # 6. Functional Requirements
 
 The following functional requirements define the minimum capabilities required for Vehicle Weather Shield version 1.0.
-
----
 
 ## Weather Detection
 
@@ -121,7 +121,6 @@ The integration shall assess the risk of severe weather using one or more suppor
 
 The integration shall support a modular weather provider architecture, allowing additional providers to be added without major architectural changes.
 
----
 
 ## Vehicle Integration
 
@@ -133,7 +132,6 @@ The integration shall determine whether the configured Tesla vehicle is present 
 
 The integration shall determine whether the configured vehicle is exposed to severe weather based on its location.
 
----
 
 ## Notifications
 
@@ -145,7 +143,6 @@ The integration shall notify the user before severe weather reaches the protecte
 
 The integration shall expose different warning levels based on the calculated weather risk.
 
----
 
 ## Home Assistant Integration
 
@@ -161,7 +158,6 @@ The exposed entities shall be usable in Home Assistant automations.
 
 The integration shall be configurable through the Home Assistant user interface.
 
----
 
 ## Distribution
 
@@ -177,6 +173,7 @@ The integration shall support normal HACS update mechanisms.
 
 The integration shall expose its operational status and provider availability within Home Assistant.
 
+---
 # 7. Non Functional Requirements
 
 The following non-functional requirements define the quality attributes required for Vehicle Weather Shield version 1.0.
@@ -257,54 +254,183 @@ The project shall include sufficient documentation to support installation, conf
 
 The project shall provide documentation describing its architecture, development workflow and contribution guidelines.
 
-
-
+---
 # 8. Use Cases
 
 The following use cases describe the primary interactions between users and Vehicle Weather Shield.
 
-## UC-001 - Early Hail Warning
+## UC-001 – Early Hail Warning
 
-As a Tesla owner,
+### Actor
 
-I want to receive an early warning when hail is expected,
+Tesla Owner
 
-So that I have enough time to move my vehicle to a safe location.
+### Goal
+
+Receive an early warning before hail reaches the protected location.
+
+### Preconditions
+
+- Vehicle Weather Shield is installed.
+- A supported weather provider is configured.
+- A Tesla vehicle is configured.
+- Notifications are enabled.
+
+### Main Flow
+
+1. The integration retrieves weather information.
+2. The integration detects an increased hail risk.
+3. The vehicle location is evaluated.
+4. The calculated risk exceeds the configured notification threshold.
+5. A Home Assistant notification is sent to the user.
+
+### Alternative Flows
+
+- No hail risk detected.
+- Weather provider unavailable.
+- Notification service unavailable.
+
+### Postconditions
+
+The user receives sufficient warning to protect the vehicle before hail arrives.
+
+### Related Functional Requirements
+
+- FR-001
+- FR-002
+- FR-004
+- FR-005
+- FR-006
+
+## UC-002 – Home Assistant Automation
+
+### Actor
+
+Home Assistant User
+
+### Goal
+
+Use Vehicle Weather Shield entities to create custom Home Assistant automations.
+
+### Preconditions
+
+- Vehicle Weather Shield is installed.
+- Weather entities are available.
+- Home Assistant automation engine is operational.
+
+### Main Flow
+
+1. The integration exposes weather and vehicle entities.
+2. The user creates one or more Home Assistant automations.
+3. Weather conditions change.
+4. The entity state is updated.
+5. The automation is triggered.
+
+### Alternative Flows
+
+- Required entities are unavailable.
+- Automation is disabled.
+- Weather provider data is unavailable.
+
+### Postconditions
+
+Home Assistant automations respond automatically to weather conditions.
+
+### Related Functional Requirements
+
+- FR-002 Weather Risk Assessment
+- FR-008 Home Assistant Entities
+- FR-009 Home Assistant Automations
+
+## UC-003 – Tesla Presence Detection
+
+### Actor
+
+Tesla Owner
+
+### Goal
+
+Determine whether the configured Tesla vehicle is located at the protected location.
+
+### Preconditions
+
+- Vehicle Weather Shield is installed.
+- Tesla integration is configured.
+- Vehicle location is available.
+
+### Main Flow
+
+1. The integration retrieves the vehicle location.
+2. The integration compares the vehicle location with the configured protected location.
+3. The integration determines whether the vehicle is present.
+4. The vehicle exposure status is updated.
+5. Notifications are evaluated based on the exposure status.
+
+### Alternative Flows
+
+- Tesla API unavailable.
+- Vehicle location unavailable.
+- Authentication failure.
+
+### Postconditions
+
+The integration knows whether the vehicle is exposed to local severe weather.
+
+### Related Functional Requirements
+
+- FR-004 Tesla Presence Detection
+- FR-005 Vehicle Exposure Assessment
+- FR-006 Early Warning Notifications.
+
+## UC-004 – Installation through HACS
+
+### Actor
+
+Home Assistant User
+
+### Goal
+
+Install Vehicle Weather Shield through HACS without manual configuration.
+
+### Preconditions
+
+- HACS is installed.
+- Internet connection is available.
+
+### Main Flow
+
+1. The user searches for Vehicle Weather Shield in HACS.
+2. The integration is installed.
+3. Home Assistant downloads the integration.
+4. Home Assistant is restarted if required.
+5. The integration becomes available through the configuration UI.
+
+### Alternative Flows
+
+- HACS unavailable.
+- Download failed.
+- Installation failed.
+
+### Postconditions
+
+Vehicle Weather Shield is installed and ready for configuration.
+
+### Related Functional Requirements
+
+- FR-010 Configuration Flow
+- FR-011 HACS Installation
+- FR-012 Automatic Updates
+
+## UC-005 – Protect Vehicle
 
 ---
-
-## UC-002 - Home Assistant Automation
-
-As a Home Assistant user,
-
-I want weather risks to be available as entities,
-
-So that I can create my own automations.
-
----
-
-## UC-003 - Tesla Presence
-
-As a Tesla owner,
-
-I want Vehicle Weather Shield to know whether my Tesla is at home,
-
-So that notifications are only sent when relevant.
-
----
-
-## UC-004 - Easy Installation
-
-As a Home Assistant user,
-
-I want to install the integration through HACS,
-
-So that no manual installation is required.
-
 # 9. Assumptions
 
+---
 # 10. Risks
 
+---
 # 11. Success Criteria
 
+---
 # 12. Roadmap
