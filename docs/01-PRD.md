@@ -179,9 +179,53 @@ The integration shall expose its operational status and provider availability wi
 
 # 7. Non Functional Requirements
 
-This section will define the quality attributes required for Vehicle Weather Shield.
+The following non-functional requirements define the quality attributes required for Vehicle Weather Shield version 1.0.
 
-The non-functional requirements will cover performance, reliability, maintainability, security, privacy and other quality characteristics required for version 1.0.
+These requirements describe how the integration should perform, rather than what functionality it provides.
+
+## Reliability
+
+## NFR-001 Service Availability
+
+The integration shall continue operating when one or more supported weather providers are temporarily unavailable.
+
+## NFR-002 Operational Health Monitoring
+
+The integration shall expose the operational status of weather providers and integration components within Home Assistant, including their availability and last successful update.
+
+### NFR-003 Fault Tolerance
+
+The integration shall recover automatically from temporary communication failures without requiring user intervention.
+
+## Performance Efficiency
+
+### NFR-004 Efficient Resource Usage
+
+The integration shall minimize CPU, memory and network usage to avoid negatively impacting Home Assistant performance.
+
+### NFR-005 Efficient Data Retrieval
+
+The integration shall avoid unnecessary requests to weather providers and vehicle APIs by using appropriate update intervals and caching where applicable.
+
+## Security
+
+### NFR-006 Secure Credential Handling
+
+The integration shall securely store and handle authentication credentials using Home Assistant's recommended security mechanisms.
+
+### NFR-007 Secure Communication
+
+The integration shall communicate with external services using secure encrypted connections.
+
+## Maintainability
+
+### NFR-008 Modular Design
+
+The integration shall use a modular architecture that enables additional weather providers and vehicle manufacturers to be added with minimal impact on existing functionality.
+
+### NFR-009 Code Maintainability
+
+The source code shall follow Home Assistant development standards and be structured to support long-term maintenance.
 
 # 8. Use Cases
 
