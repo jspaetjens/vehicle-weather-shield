@@ -185,11 +185,11 @@ These requirements describe how the integration should perform, rather than what
 
 ## Reliability
 
-## NFR-001 Service Availability
+### NFR-001 Service Availability
 
-The integration shall continue operating when one or more supported weather providers are temporarily unavailable.
+The integration shall continue operating to the maximum extent possible when one or more supported weather providers are temporarily unavailable.
 
-## NFR-002 Operational Health Monitoring
+### NFR-002 Operational Health Monitoring
 
 The integration shall expose the operational status of weather providers and integration components within Home Assistant, including their availability and last successful update.
 
@@ -211,7 +211,7 @@ The integration shall avoid unnecessary requests to weather providers and vehicl
 
 ### NFR-006 Secure Credential Handling
 
-The integration shall securely store and handle authentication credentials using Home Assistant's recommended security mechanisms.
+The integration shall use Home Assistant's recommended mechanisms for securely storing and handling authentication credentials.
 
 ### NFR-007 Secure Communication
 
@@ -226,6 +226,38 @@ The integration shall use a modular architecture that enables additional weather
 ### NFR-009 Code Maintainability
 
 The source code shall follow Home Assistant development standards and be structured to support long-term maintenance.
+
+## Testability
+
+### NFR-010 Automated Testing
+
+The integration shall support automated testing to verify functionality and prevent regressions.
+
+### NFR-011 Continuous Integration
+
+The integration shall be validated automatically through continuous integration before code changes are released.
+
+## Usability
+
+### NFR-012 Ease of Installation
+
+The integration shall be installable and configurable using standard Home Assistant user interfaces without requiring manual file modifications.
+
+### NFR-013 User Feedback
+
+The integration shall provide clear status information and meaningful error messages to assist users in diagnosing problems.
+
+## Documentation
+
+### NFR-014 Project Documentation
+
+The project shall include sufficient documentation to support installation, configuration, maintenance and community contributions.
+
+### NFR-015 Developer Documentation
+
+The project shall provide documentation describing its architecture, development workflow and contribution guidelines.
+
+
 
 # 8. Use Cases
 
