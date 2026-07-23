@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.3 (Draft)
+**Version:** 0.4 (Draft)
 
 **Status:** Draft
 
@@ -14,11 +14,14 @@
 
 ## Document History
 
+## Document History
+
 | Version | Date | Author | Description |
 |----------|------------|-----------------|---------------------------------------------------------------|
 | 0.1 | 2026-07-23 | Jack Spaetjens | Initial architecture structure |
 | 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD). |
 | 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
+| 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow. |
 ---
 
 # 1. Purpose
@@ -116,9 +119,53 @@ The architecture shall support maintainability, readability and extensibility to
 
 ## 3.1 Overview
 
-## 3.2 Main Components
+Vehicle Weather Shield follows a modular, event-driven architecture that collects weather information, evaluates the potential impact on protected vehicles and informs users through Home Assistant.
 
-## 3.3 Data Flow
+The solution separates external integrations from business logic, allowing weather providers, vehicle integrations and notification mechanisms to evolve independently.
+
+The architecture is designed to support future expansion while maintaining a clear separation of responsibilities.
+
+---
+
+## 3.2 Solution Components
+
+The solution consists of five primary logical components.
+
+| Component | Responsibility |
+|-----------|----------------|
+| Weather Providers | Retrieve weather information from one or more supported weather services. |
+| Vehicle Integration | Determine the status and location of the protected vehicle. |
+| Risk Assessment | Evaluate the likelihood and severity of weather events affecting the vehicle. |
+| Notification Service | Generate and deliver notifications based on the calculated weather risk. |
+| Home Assistant Integration | Expose entities, diagnostics and configuration within Home Assistant. |
+
+Each component has a clearly defined responsibility and communicates through well-defined domain objects.
+
+---
+
+## 3.3 Information Flow
+
+At a high level, Vehicle Weather Shield processes information in the following sequence:
+
+1. Weather information is retrieved from one or more configured weather providers.
+2. Vehicle information is obtained from the configured vehicle integration.
+3. The collected information is combined to calculate the current weather risk.
+4. When predefined conditions are met, notifications are generated.
+5. Weather status, vehicle status and diagnostics are exposed through Home Assistant.
+
+This logical flow represents the movement of information through the solution and is independent of implementation details.
+
+---
+
+## 3.4 Architectural Boundaries
+
+Vehicle Weather Shield intentionally separates business logic from external integrations.
+
+External services, including weather providers and vehicle APIs, are treated as replaceable components.
+
+Business logic is responsible for interpreting information received from external systems without depending on provider-specific implementations.
+
+This separation improves maintainability, testability and long-term extensibility.
 
 ---
 
