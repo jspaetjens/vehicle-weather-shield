@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.2 (Draft)
+**Version:** 0.3 (Draft)
 
 **Status:** Draft
 
@@ -10,7 +10,7 @@
 
 **Author:** Jack Spaetjens
 
-**Last Updated:** 2026-07-20
+**Last Updated:** 2026-07-21
 
 ## Document History
 
@@ -18,10 +18,11 @@
 |----------|------------|----------------|----------------------------------------------|
 | 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure |
 | 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases |
+| 0.3 | 2026-07-23 | Jack Spaetjens | Reviewed and stabilized PRD, refined requirements and completed use cases |
 ---
 # 1. Introduction
 
-Vehicle Weather Shield is designed to provide reliable early warnings that help vehicle owners protect their vehicles against severe weather.
+Vehicle Weather Shield is a Home Assistant integration that provides reliable early warnings to help vehicle owners protect their vehicles against severe weather.
 
 The integration combines multiple weather providers, intelligent risk assessment and Home Assistant automations to provide timely warnings and actionable information.
 
@@ -171,7 +172,7 @@ The integration shall support normal HACS update mechanisms.
 
 ### FR-013 Integration Health
 
-The integration shall expose its operational status and provider availability within Home Assistant.
+The integration shall expose its operational status, provider availability and diagnostic information within Home Assistant.
 
 ---
 # 7. Non Functional Requirements
@@ -422,6 +423,43 @@ Vehicle Weather Shield is installed and ready for configuration.
 - FR-012 Automatic Updates
 
 ## UC-005 – Protect Vehicle
+
+### Actor
+
+Vehicle Owner
+
+### Goal
+
+Move the vehicle to a safe location before severe weather arrives.
+
+### Preconditions
+
+- Vehicle Weather Shield is installed.
+- Severe weather has been detected.
+- A notification has been delivered successfully.
+
+### Main Flow
+
+1. Vehicle Weather Shield detects severe weather.
+2. A notification is sent to the user.
+3. The user reviews the warning.
+4. The user moves the vehicle to a safe location.
+5. The vehicle is protected from severe weather.
+
+### Alternative Flows
+
+- The user ignores the notification.
+- No safe parking location is available.
+- Severe weather arrives before the vehicle can be moved.
+
+### Postconditions
+
+The vehicle has been moved to a safer location or the user has been informed of the potential risk.
+
+### Related Functional Requirements
+
+- FR-006 Early Warning Notifications
+- FR-007 Notification Severity
 
 ---
 # 9. Assumptions
