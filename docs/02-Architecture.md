@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.4 (Draft)
+**Version:** 0.5 (Draft)
 
 **Status:** Draft
 
@@ -12,16 +12,17 @@
 
 **Last Updated:** 2026-07-23
 
-## Document History
+**Version:** 0.5 (Draft)
 
 ## Document History
 
 | Version | Date | Author | Description |
 |----------|------------|-----------------|---------------------------------------------------------------|
 | 0.1 | 2026-07-23 | Jack Spaetjens | Initial architecture structure |
-| 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD). |
-| 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
-| 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow. |
+| 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD) |
+| 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture |
+| 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow |
+| 0.5 | 2026-07-23 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships |
 ---
 
 # 1. Purpose
@@ -171,19 +172,66 @@ This separation improves maintainability, testability and long-term extensibilit
 
 # 4. Domain Model
 
+The domain model describes the primary business objects within Vehicle Weather Shield and their relationships.
+
+These domain objects represent the core concepts of the solution and remain independent of implementation details.
+
+---
+
 ## 4.1 WeatherProvider
 
 ### Purpose
 
+WeatherProvider represents an external service capable of supplying weather information to Vehicle Weather Shield.
+
+It provides a standardized abstraction for retrieving weather data, allowing different providers to be integrated without affecting the core business logic.
+
 ### Responsibilities
+
+WeatherProvider is responsible for:
+
+- Retrieving weather information from an external source.
+- Normalizing provider-specific data.
+- Reporting provider availability.
+- Providing metadata about the source of weather information.
 
 ### Properties
 
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| provider_name | string | ✅ | Display name of the weather provider |
+| provider_version | string | ❌ | Provider or API version |
+| enabled | boolean | ✅ | Indicates whether the provider is enabled |
+| supported_capabilities | list | ✅ | Supported weather capabilities (hail, wind, lightning, precipitation, etc.) |
+| health_status | enum | ✅ | Current operational status |
+| last_successful_update | UTC datetime | ❌ | Timestamp of the last successful data retrieval |
+| last_error | string | ❌ | Most recent provider error |
+
 ### Business Rules
+
+- A WeatherProvider shall expose a consistent interface regardless of the external service.
+- Provider-specific implementation details shall remain isolated from business logic.
+- Temporary provider failures shall not prevent the integration from continuing to operate when alternative providers are available.
+- Provider health shall be available for diagnostics.
 
 ### Relationships
 
+WeatherProvider provides weather information to:
+
+- WeatherResponse
+
+WeatherProvider is used by:
+
+- Vehicle Weather Shield
+
 ### Future Extensions
+
+Future releases may support:
+
+- Multiple active weather providers.
+- Provider prioritization.
+- Automatic provider failover.
+- Community-developed weather providers.
 
 ---
 
@@ -191,15 +239,60 @@ This separation improves maintainability, testability and long-term extensibilit
 
 ### Purpose
 
+WeatherResponse represents standardized weather information received from a WeatherProvider.
+
+It provides a provider-independent representation of weather conditions that can be consumed by the business logic.
+
 ### Responsibilities
+
+WeatherResponse is responsible for:
+
+- Storing normalized weather information.
+- Recording when the data was retrieved.
+- Identifying the originating provider.
+- Providing weather information for risk assessment.
 
 ### Properties
 
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| provider | WeatherProvider | ✅ | Source of the weather information |
+| observation_time | UTC datetime | ✅ | Time the weather observation was generated |
+| retrieved_at | UTC datetime | ✅ | Time the information was retrieved |
+| temperature | decimal | ❌ | Air temperature (°C) |
+| humidity | percentage | ❌ | Relative humidity |
+| wind_speed | decimal | ❌ | Sustained wind speed |
+| wind_gust | decimal | ❌ | Maximum wind gust |
+| precipitation | decimal | ❌ | Expected precipitation |
+| hail_probability | percentage | ❌ | Probability of hail |
+| lightning_probability | percentage | ❌ | Probability of lightning |
+| weather_alerts | list | ❌ | Active weather alerts |
+
 ### Business Rules
+
+- WeatherResponse shall contain normalized weather information regardless of provider.
+- Weather observations shall include timestamps.
+- Stale weather information shall not be used for risk calculations.
+- Missing optional weather values shall not invalidate the response.
 
 ### Relationships
 
+WeatherResponse is created from:
+
+- WeatherProvider
+
+WeatherResponse is used by:
+
+- WeatherRisk
+
 ### Future Extensions
+
+Future releases may support:
+
+- Radar information.
+- Forecast confidence.
+- Multiple forecast horizons.
+- Additional weather phenomena.
 
 ---
 
@@ -207,15 +300,57 @@ This separation improves maintainability, testability and long-term extensibilit
 
 ### Purpose
 
+VehicleStatus represents the current status of the protected vehicle.
+
+It provides the information required to determine whether severe weather may affect the vehicle.
+
 ### Responsibilities
+
+VehicleStatus is responsible for:
+
+- Representing the current vehicle state.
+- Providing the current vehicle location.
+- Indicating whether the vehicle is protected.
+- Supplying vehicle information for weather risk assessment.
 
 ### Properties
 
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| vehicle_identifier | string | ✅ | Unique vehicle identifier |
+| manufacturer | string | ✅ | Vehicle manufacturer |
+| model | string | ❌ | Vehicle model |
+| current_location | geographic location | ✅ | Current vehicle location |
+| location_timestamp | UTC datetime | ✅ | Timestamp of the reported location |
+| is_at_home | boolean | ✅ | Indicates whether the vehicle is located at the protected home location |
+| protection_status | enum | ❌ | Indicates whether the vehicle is protected (garage, carport, outside, unknown) |
+| connectivity_status | enum | ✅ | Current connection status |
+
 ### Business Rules
+
+- VehicleStatus shall represent the latest known vehicle information.
+- Location information shall include a timestamp.
+- Unknown vehicle information shall not invalidate the overall integration.
+- Vehicle status shall remain independent of the weather provider implementation.
 
 ### Relationships
 
+VehicleStatus is provided by:
+
+- Vehicle Integration
+
+VehicleStatus is used by:
+
+- WeatherRisk
+
 ### Future Extensions
+
+Future releases may support:
+
+- Multiple protected vehicles.
+- Additional vehicle manufacturers.
+- Vehicle charging status.
+- Vehicle movement detection.
 
 ---
 
