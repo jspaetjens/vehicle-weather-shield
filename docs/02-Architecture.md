@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.2 (Draft)
+**Version:** 0.3 (Draft)
 
 **Status:** Draft
 
@@ -18,8 +18,7 @@
 |----------|------------|-----------------|---------------------------------------------------------------|
 | 0.1 | 2026-07-23 | Jack Spaetjens | Initial architecture structure |
 | 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD). |
-
----
+| 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
 ---
 
 # 1. Purpose
@@ -67,15 +66,49 @@ Any changes affecting product functionality shall originate from the PRD before 
 
 # 2. Architectural Principles
 
+The following architectural principles guide the design and evolution of Vehicle Weather Shield.
+
+These principles provide a consistent foundation for architectural decisions throughout the project lifecycle.
+
+---
+
 ## AP-001 Simplicity
+
+The architecture shall remain as simple as possible while satisfying the functional and non-functional requirements.
+
+Complexity shall only be introduced when it provides a clear and measurable benefit.
+
+---
 
 ## AP-002 Modularity
 
+The solution shall consist of modular components with clearly defined responsibilities.
+
+New weather providers, vehicle integrations and future capabilities should be added with minimal impact on existing components.
+
+---
+
 ## AP-003 Reliability
+
+The solution shall continue operating whenever possible, even when external services experience temporary failures.
+
+Failures shall be detected, reported and handled gracefully without compromising the overall stability of the integration.
+
+---
 
 ## AP-004 Home Assistant First
 
+Vehicle Weather Shield shall follow Home Assistant architectural guidelines and integrate naturally within the Home Assistant ecosystem.
+
+Configuration, entities, diagnostics and user interactions shall align with Home Assistant best practices.
+
+---
+
 ## AP-005 Open Source
+
+The project shall be designed to encourage community collaboration.
+
+The architecture shall support maintainability, readability and extensibility to enable contributions from the open-source community.
 
 ---
 
