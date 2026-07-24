@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0 (.7Draft)
+**Version:** 1.0 (Draft)
 
 **Status:** Draft
 
