@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.5 (Draft)
+**Version:** 0.6 (Draft)
 
 **Status:** Draft
 
@@ -20,6 +20,7 @@
 | 0.3 | 2026-07-24 | Jack Spaetjens | Added the product roadmap describing the planned development phases. |
 | 0.4 | 2026-07-24 | Jack Spaetjens | Added implementation epics defining the major functional areas of the solution. |
 | 0.5 | 2026-07-24 | Jack Spaetjens | Added features grouped by epic, including priorities and target release planning. |
+| 0.6 | 2026-07-24 | Jack Spaetjens | Added the initial product backlog containing implementation-ready user stories for Version 1.0. |
 
 ---
 - [Vehicle Weather Shield](#vehicle-weather-shield)
@@ -91,6 +92,15 @@
   - [5.6 Features – Home Assistant Integration](#56-features--home-assistant-integration)
   - [5.7 Features – Quality Assurance](#57-features--quality-assurance)
   - [5.8 Features – Release](#58-features--release)
+- [6. Initial Product Backlog](#6-initial-product-backlog)
+  - [6.1 Project Foundation](#61-project-foundation)
+  - [6.2 Weather Providers](#62-weather-providers)
+  - [6.3 Vehicle Integration](#63-vehicle-integration)
+  - [6.4 Weather Risk Assessment](#64-weather-risk-assessment)
+  - [6.5 Notifications](#65-notifications)
+  - [6.6 Home Assistant Integration](#66-home-assistant-integration)
+  - [6.7 Quality Assurance](#67-quality-assurance)
+  - [6.8 Release](#68-release)
 
 ---
 
@@ -657,3 +667,94 @@ Each Feature contributes directly to the Minimum Viable Product (MVP) or to the 
 | Version Management | Manage project versioning. | High | v1.0 |
 | HACS Publication | Publish the integration through HACS. | High | v1.0 |
 | Release Documentation | Prepare release documentation. | Medium | v1.0 |
+
+# 6. Initial Product Backlog
+
+The Initial Product Backlog translates the defined Features into implementation-ready User Stories.
+
+These User Stories represent the initial backlog for Version 1.0 and provide the starting point for sprint planning.
+
+The backlog is expected to evolve throughout the project lifecycle as new requirements, improvements and community feedback are incorporated.
+
+Each User Story shall be refined into implementation tasks within Azure DevOps prior to development.
+
+---
+
+## 6.1 Project Foundation
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| PF-001 | As a developer, I want a structured repository so that the project is organised consistently. | High |
+| PF-002 | As a developer, I want a working development environment so that I can start implementing features immediately. | High |
+| PF-003 | As a developer, I want automated build validation so that integration problems are detected early. | High |
+| PF-004 | As a maintainer, I want coding standards so that contributions remain consistent. | Medium |
+
+---
+
+## 6.2 Weather Providers
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| WP-001 | As the system, I want to retrieve weather information from KNMI so that weather risks can be evaluated. | High |
+| WP-002 | As the system, I want normalized weather responses so that business logic remains provider independent. | High |
+| WP-003 | As a maintainer, I want provider health monitoring so that provider failures can be detected. | Medium |
+
+---
+
+## 6.3 Vehicle Integration
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| VI-001 | As the system, I want to retrieve Tesla vehicle status so that weather risks can be evaluated correctly. | High |
+| VI-002 | As the system, I want the current vehicle location so that local weather information can be analysed. | High |
+| VI-003 | As the system, I want vehicle connectivity monitoring so that unavailable vehicles can be detected. | Medium |
+
+---
+
+## 6.4 Weather Risk Assessment
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| WR-001 | As the system, I want to calculate weather risks so that users receive meaningful notifications. | High |
+| WR-002 | As the system, I want to determine risk severity so that notification urgency reflects the actual threat. | High |
+| WR-003 | As the system, I want validated weather information so that incorrect risk calculations are prevented. | Medium |
+
+---
+
+## 6.5 Notifications
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| NT-001 | As a user, I want to receive notifications when severe weather threatens my vehicle. | High |
+| NT-002 | As a user, I want duplicate notifications to be minimized so that I do not receive unnecessary alerts. | Medium |
+| NT-003 | As a user, I want notification severity to reflect the calculated weather risk. | Medium |
+
+---
+
+## 6.6 Home Assistant Integration
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| HA-001 | As a Home Assistant user, I want to configure Vehicle Weather Shield through the user interface. | High |
+| HA-002 | As a Home Assistant user, I want entities that expose weather risk information. | High |
+| HA-003 | As a Home Assistant user, I want diagnostics to assist with troubleshooting. | Medium |
+
+---
+
+## 6.7 Quality Assurance
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| QA-001 | As a developer, I want automated unit tests so that software quality remains high. | High |
+| QA-002 | As a developer, I want integration tests so that component interaction is verified. | High |
+| QA-003 | As a maintainer, I want documentation validation so that project documentation remains consistent. | Medium |
+
+---
+
+## 6.8 Release
+
+| ID | User Story | Priority |
+|----|------------|----------|
+| RL-001 | As a user, I want Vehicle Weather Shield to be installable through HACS. | High |
+| RL-002 | As a maintainer, I want versioned releases so that software updates remain traceable. | High |
+| RL-003 | As a maintainer, I want release documentation so that users understand each release. | Medium |
