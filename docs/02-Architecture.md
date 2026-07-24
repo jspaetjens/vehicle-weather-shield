@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.6 (Draft)
+**Version:** 0.7 (Draft)
 
 **Status:** Draft
 
@@ -10,13 +10,7 @@
 
 **Author:** Jack Spaetjens
 
-**Last Updated:** 2026-07-23
-
-**Version:** 0.5 (Draft)
-
-**Version:** 0.5 (Draft)
-
-**Version:** 0.6 (Draft)
+**Last Updated:** 2026-07-24
 
 ## Document History
 
@@ -26,8 +20,9 @@
 | 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD). |
 | 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
 | 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow. |
-| 0.5 | 2026-07-23 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships. |
-| 0.6 | 2026-07-23 | Jack Spaetjens | Added design considerations covering extensibility, provider independence, scalability and maintainability. |
+| 0.5 | 2026-07-24 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships. |
+| 0.6 | 2026-07-24 | Jack Spaetjens | Added design considerations covering extensibility, provider independence, scalability and maintainability. |
+| 0.7 | 2026-07-24 | Jack Spaetjens | Added solution components describing the logical architecture of the solution. |
 ---
 
 # 1. Purpose
@@ -564,24 +559,175 @@ The architecture shall support exposure of integration health, provider status a
 
 # 6. Solution Components
 
+The logical architecture of Vehicle Weather Shield consists of a number of cooperating solution components.
+
+Each component has a clearly defined responsibility and communicates through the domain model described in Chapter 4.
+
+The separation of responsibilities improves maintainability, extensibility and long-term evolution of the solution.
+
+---
+
 ## 6.1 Weather Providers
+
+The Weather Providers component is responsible for retrieving weather information from one or more external weather services.
+
+Its responsibilities include:
+
+- Connecting to supported weather providers.
+- Retrieving weather information.
+- Normalizing provider-specific data.
+- Reporting provider availability.
+
+The Weather Providers component is the entry point for all weather-related information entering the solution.
+
+---
 
 ## 6.2 Vehicle Integration
 
+The Vehicle Integration component provides information about the protected vehicle.
+
+Its responsibilities include:
+
+- Retrieving vehicle status.
+- Determining the current vehicle location.
+- Reporting vehicle connectivity.
+- Providing standardized vehicle information to the business domain.
+
+The component isolates vehicle-specific implementations from the remainder of the solution.
+
+---
+
 ## 6.3 Risk Assessment
+
+The Risk Assessment component represents the core business logic of Vehicle Weather Shield.
+
+Its responsibilities include:
+
+- Combining weather information with vehicle information.
+- Evaluating severe weather risks.
+- Determining notification severity.
+- Producing standardized weather risk information.
+
+The Risk Assessment component remains independent of individual weather providers and vehicle manufacturers.
+
+---
 
 ## 6.4 Notification Service
 
+The Notification Service component informs users when protective action may be required.
+
+Its responsibilities include:
+
+- Generating notifications.
+- Determining notification severity.
+- Preventing unnecessary duplicate notifications.
+- Delivering notifications through supported Home Assistant mechanisms.
+
+Notification generation is based exclusively on the calculated WeatherRisk.
+
+---
+
 ## 6.5 Home Assistant Integration
+
+The Home Assistant Integration component exposes Vehicle Weather Shield to the Home Assistant ecosystem.
+
+Its responsibilities include:
+
+- Configuration through the Home Assistant user interface.
+- Entity creation.
+- Diagnostics.
+- Device information.
+- Integration health reporting.
+- Automation support.
+
+This component provides the interface between Vehicle Weather Shield and Home Assistant while keeping business logic independent of Home Assistant implementation details.
 
 ---
 
 # 7. Future Architecture
 
+The architecture of Vehicle Weather Shield is designed to support future growth while preserving the core architectural principles described in this document.
+
+Future enhancements should build upon the existing domain model and solution structure without requiring fundamental architectural redesign.
+
+---
+
 ## 7.1 Multi-Provider Support
+
+Future versions may support multiple weather providers operating simultaneously.
+
+The architecture allows weather information from different providers to be combined, compared or prioritized while maintaining a provider-independent business domain.
+
+Potential future capabilities include:
+
+- Provider prioritization.
+- Automatic provider failover.
+- Provider comparison.
+- Aggregated weather information.
+
+---
 
 ## 7.2 Multi-Vehicle Support
 
+Although version 1.0 focuses on protecting a single vehicle, the architecture supports future expansion to multiple vehicles.
+
+Future versions may allow users to monitor and protect multiple vehicles simultaneously while maintaining a shared weather risk assessment process.
+
+---
+
 ## 7.3 Additional Weather Risks
 
-## 7.4 Community Extensions
+The current architecture is intentionally designed to support additional weather hazards beyond hail.
+
+Future releases may include support for:
+
+- Extreme wind.
+- Heavy rainfall.
+- Flooding.
+- Snow and ice.
+- Extreme temperatures.
+- Wildfire smoke or air quality warnings.
+
+These capabilities can be introduced without modifying the overall architectural structure.
+
+---
+
+## 7.4 Advanced Risk Assessment
+
+Future versions may introduce more advanced methods for evaluating weather risks.
+
+Examples include:
+
+- Combining multiple weather providers.
+- Confidence-based risk calculations.
+- Historical trend analysis.
+- Predictive weather modelling.
+- User-configurable risk profiles.
+
+The architecture isolates risk assessment from external providers, allowing future improvements without affecting the remainder of the solution.
+
+---
+
+## 7.5 Additional Notification Channels
+
+The architecture supports future expansion of notification mechanisms.
+
+Potential future notification channels include:
+
+- Mobile push notifications.
+- Smart watches.
+- Voice assistants.
+- Vehicle integrations.
+- Smart home devices.
+
+Notification channels remain independent from the weather risk calculation process.
+
+---
+
+## 7.6 Community Contributions
+
+Vehicle Weather Shield is intended to evolve as an open-source project.
+
+The modular architecture enables community members to contribute new weather providers, vehicle integrations and additional capabilities without requiring changes to the core solution architecture.
+
+Future architectural decisions should continue to prioritize maintainability, readability and extensibility to encourage long-term community participation.
