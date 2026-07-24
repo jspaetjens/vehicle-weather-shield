@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.5 (Draft)
+**Version:** 0.6 (Draft)
 
 **Status:** Draft
 
@@ -16,6 +16,8 @@
 
 **Version:** 0.5 (Draft)
 
+**Version:** 0.6 (Draft)
+
 ## Document History
 
 | Version | Date | Author | Description |
@@ -25,6 +27,7 @@
 | 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
 | 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow. |
 | 0.5 | 2026-07-23 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships. |
+| 0.6 | 2026-07-23 | Jack Spaetjens | Added design considerations covering extensibility, provider independence, scalability and maintainability. |
 ---
 
 # 1. Purpose
@@ -475,15 +478,87 @@ Future releases may support:
 
 # 5. Design Considerations
 
+This chapter describes the primary architectural considerations that influence the design of Vehicle Weather Shield.
+
+These considerations support the architectural principles defined in Chapter 2 and provide guidance for future implementation and extension of the solution.
+
+---
+
 ## 5.1 Extensibility
+
+Vehicle Weather Shield is designed to evolve over time without requiring significant architectural changes.
+
+The solution shall support the addition of new weather providers, vehicle manufacturers and future weather-related capabilities while minimizing the impact on existing functionality.
+
+Extensibility is achieved through modular components, standardized domain objects and clear separation of responsibilities.
+
+---
 
 ## 5.2 Provider Independence
 
+The business logic of Vehicle Weather Shield shall remain independent of any specific weather provider.
+
+Weather information shall be normalized before entering the core domain model, ensuring that provider-specific implementations remain isolated from the remainder of the solution.
+
+This approach enables providers to be added, replaced or removed without affecting the overall architecture.
+
+---
+
 ## 5.3 Vehicle Independence
+
+Although version 1.0 focuses on Tesla integration, the overall architecture is designed to support additional vehicle manufacturers in future releases.
+
+Vehicle-specific implementations shall remain isolated from the core business logic through standardized domain objects and clearly defined interfaces.
+
+---
 
 ## 5.4 Data Freshness
 
+Vehicle Weather Shield relies on timely weather information to provide meaningful early warnings.
+
+The solution shall consider the age of weather information when evaluating weather risks and generating notifications.
+
+Stale or outdated information should not be used when determining active weather risks.
+
+---
+
 ## 5.5 Error Handling
+
+Temporary failures are expected when communicating with external weather providers and vehicle services.
+
+The solution shall detect communication failures, report operational status and recover automatically whenever possible without requiring user intervention.
+
+Failures affecting individual external services should not unnecessarily impact the remainder of the solution.
+
+---
+
+## 5.6 Scalability
+
+The architecture shall support future functional growth without requiring fundamental architectural redesign.
+
+Examples include:
+
+- additional weather providers;
+- additional vehicle manufacturers;
+- new severe weather categories;
+- new notification channels;
+- future analytical capabilities.
+
+---
+
+## 5.7 Maintainability
+
+The architecture shall encourage long-term maintainability through clear separation of responsibilities and consistent domain modelling.
+
+Solution components should remain loosely coupled, allowing future enhancements and refactoring to be performed with minimal impact on the overall system.
+
+---
+
+## 5.8 Observability
+
+Vehicle Weather Shield shall provide sufficient operational insight to support troubleshooting and maintenance.
+
+The architecture shall support exposure of integration health, provider status and diagnostic information through Home Assistant, enabling users to identify operational issues without requiring direct access to implementation details.
 
 ---
 
