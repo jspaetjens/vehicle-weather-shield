@@ -39,6 +39,47 @@
   - [3.3 Phase 3 – Home Assistant Integration](#33-phase-3--home-assistant-integration)
   - [3.4 Phase 4 – Stabilisation](#34-phase-4--stabilisation)
   - [3.5 Phase 5 – Initial Release](#35-phase-5--initial-release)
+- [4. Epics](#4-epics)
+  - [Epic 1 – Project Foundation](#epic-1--project-foundation)
+    - [Purpose](#purpose)
+    - [Objectives](#objectives)
+    - [Success Criteria](#success-criteria)
+    - [Dependencies](#dependencies)
+  - [Epic 2 – Weather Providers](#epic-2--weather-providers)
+    - [Purpose](#purpose-1)
+    - [Objectives](#objectives-1)
+    - [Success Criteria](#success-criteria-1)
+    - [Dependencies](#dependencies-1)
+  - [Epic 3 – Vehicle Integration](#epic-3--vehicle-integration)
+    - [Purpose](#purpose-2)
+    - [Objectives](#objectives-2)
+    - [Success Criteria](#success-criteria-2)
+    - [Dependencies](#dependencies-2)
+  - [Epic 4 – Weather Risk Assessment](#epic-4--weather-risk-assessment)
+    - [Purpose](#purpose-3)
+    - [Objectives](#objectives-3)
+    - [Success Criteria](#success-criteria-3)
+    - [Dependencies](#dependencies-3)
+  - [Epic 5 – Notifications](#epic-5--notifications)
+    - [Purpose](#purpose-4)
+    - [Objectives](#objectives-4)
+    - [Success Criteria](#success-criteria-4)
+    - [Dependencies](#dependencies-4)
+  - [Epic 6 – Home Assistant Integration](#epic-6--home-assistant-integration)
+    - [Purpose](#purpose-5)
+    - [Objectives](#objectives-5)
+    - [Success Criteria](#success-criteria-5)
+    - [Dependencies](#dependencies-5)
+  - [Epic 7 – Quality Assurance](#epic-7--quality-assurance)
+    - [Purpose](#purpose-6)
+    - [Objectives](#objectives-6)
+    - [Success Criteria](#success-criteria-6)
+    - [Dependencies](#dependencies-6)
+  - [Epic 8 – Release](#epic-8--release)
+    - [Purpose](#purpose-7)
+    - [Objectives](#objectives-7)
+    - [Success Criteria](#success-criteria-7)
+    - [Dependencies](#dependencies-7)
 
 ---
 
@@ -273,4 +314,236 @@ Primary objectives include:
 - HACS publication;
 - community availability.
 
-Completion of this phase concludes the Version 1.0 roadmap.
+# 4. Epics
+
+The implementation of Vehicle Weather Shield is organised into a number of Epics.
+
+Each Epic represents a major functional area of the solution and groups related Features and User Stories.
+
+The Epics described in this chapter provide the foundation for the Product Backlog and future sprint planning.
+
+---
+
+## Epic 1 – Project Foundation
+
+### Purpose
+
+The Project Foundation Epic establishes the technical foundation required for all subsequent development activities.
+
+### Objectives
+
+- Establish the project repository.
+- Configure the development environment.
+- Configure continuous integration.
+- Define coding standards.
+- Establish documentation.
+- Prepare the project structure.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- the development environment is operational;
+- the repository structure is complete;
+- continuous integration is functioning;
+- documentation is available;
+- the project is ready for feature development.
+
+### Dependencies
+
+None.
+
+---
+
+## Epic 2 – Weather Providers
+
+### Purpose
+
+Provide standardized weather information to the business domain.
+
+### Objectives
+
+- Retrieve weather data.
+- Normalize provider responses.
+- Monitor provider availability.
+- Support future provider expansion.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- weather information can be retrieved;
+- provider responses are normalized;
+- provider health can be monitored.
+
+### Dependencies
+
+Epic 1 – Project Foundation.
+
+---
+
+## Epic 3 – Vehicle Integration
+
+### Purpose
+
+Provide standardized vehicle information to the business domain.
+
+### Objectives
+
+- Retrieve vehicle status.
+- Retrieve vehicle location.
+- Monitor connectivity.
+- Support future vehicle manufacturers.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- vehicle information is available;
+- location information is current;
+- vehicle status is exposed to the domain model.
+
+### Dependencies
+
+Epic 1 – Project Foundation.
+
+---
+
+## Epic 4 – Weather Risk Assessment
+
+### Purpose
+
+Evaluate weather information together with vehicle information to determine weather risks.
+
+### Objectives
+
+- Evaluate severe weather.
+- Calculate weather risks.
+- Determine risk severity.
+- Produce standardized WeatherRisk objects.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- weather risks are calculated;
+- risks are available to other solution components;
+- calculations are independent of providers.
+
+### Dependencies
+
+Epic 2 – Weather Providers
+
+Epic 3 – Vehicle Integration.
+
+---
+
+## Epic 5 – Notifications
+
+### Purpose
+
+Notify users whenever protective action may be required.
+
+### Objectives
+
+- Generate notifications.
+- Prevent unnecessary duplicates.
+- Support multiple notification severities.
+- Deliver notifications through Home Assistant.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- notifications are generated;
+- notifications reflect calculated weather risks;
+- duplicate notifications are minimized.
+
+### Dependencies
+
+Epic 4 – Weather Risk Assessment.
+
+---
+
+## Epic 6 – Home Assistant Integration
+
+### Purpose
+
+Expose Vehicle Weather Shield through the Home Assistant platform.
+
+### Objectives
+
+- Configuration Flow.
+- Entities.
+- Diagnostics.
+- Device Information.
+- Automation Support.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- configuration is possible through Home Assistant;
+- entities are available;
+- diagnostics are available;
+- automations can consume the integration.
+
+### Dependencies
+
+Epic 5 – Notifications.
+
+---
+
+## Epic 7 – Quality Assurance
+
+### Purpose
+
+Ensure the solution satisfies the expected quality standards.
+
+### Objectives
+
+- Unit testing.
+- Integration testing.
+- Validation.
+- Documentation review.
+- Performance verification.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- automated tests pass;
+- documentation is complete;
+- quality requirements are satisfied.
+
+### Dependencies
+
+All implementation Epics.
+
+---
+
+## Epic 8 – Release
+
+### Purpose
+
+Prepare and publish the initial public release of Vehicle Weather Shield.
+
+### Objectives
+
+- Release preparation.
+- Version management.
+- Packaging.
+- HACS publication.
+- Release documentation.
+
+### Success Criteria
+
+The Epic is considered complete when:
+
+- Version 1.0 is published;
+- release documentation is complete;
+- installation through HACS is available.
+
+### Dependencies
+
+All previous Epics.
