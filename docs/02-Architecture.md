@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.7 (Draft)
+**Version:** 0 (.7Draft)
 
 **Status:** Draft
 
@@ -20,9 +20,11 @@
 | 0.2 | 2026-07-23 | Jack Spaetjens | Added purpose, scope and relationship with the Product Requirements Document (PRD). |
 | 0.3 | 2026-07-23 | Jack Spaetjens | Added architectural principles defining the foundation of the solution architecture. |
 | 0.4 | 2026-07-23 | Jack Spaetjens | Added high-level architecture, solution components and information flow. |
-| 0.5 | 2026-07-24 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships. |
-| 0.6 | 2026-07-24 | Jack Spaetjens | Added design considerations covering extensibility, provider independence, scalability and maintainability. |
+| 0.5 | 2026-07-23 | Jack Spaetjens | Completed the core domain model describing the primary business objects and their relationships. |
+| 0.6 | 2026-07-23 | Jack Spaetjens | Added design considerations covering extensibility, provider independence, scalability and maintainability. |
 | 0.7 | 2026-07-24 | Jack Spaetjens | Added solution components describing the logical architecture of the solution. |
+| 0.8 | 2026-07-24 | Jack Spaetjens | Added future architecture describing long-term architectural evolution. |
+| 1.0 | 2026-07-24 | Jack Spaetjens | Architecture reviewed and approved as implementation baseline. |
 ---
 
 # 1. Purpose
