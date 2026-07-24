@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.1 (Draft)
+**Version:** 0.5 (Draft)
 
 **Status:** Draft
 
@@ -13,11 +13,13 @@
 **Last Updated:** 2026-07-24
 
 ---
-
 | Version | Date | Author | Description |
-|----------|------------|-----------------|--------------------------------|
+|----------|------------|-----------------|----------------------------------------------|
 | 0.1 | 2026-07-24 | Jack Spaetjens | Initial roadmap structure. |
 | 0.2 | 2026-07-24 | Jack Spaetjens | Added development strategy describing the implementation philosophy and development principles. |
+| 0.3 | 2026-07-24 | Jack Spaetjens | Added the product roadmap describing the planned development phases. |
+| 0.4 | 2026-07-24 | Jack Spaetjens | Added implementation epics defining the major functional areas of the solution. |
+| 0.5 | 2026-07-24 | Jack Spaetjens | Added features grouped by epic, including priorities and target release planning. |
 
 ---
 - [Vehicle Weather Shield](#vehicle-weather-shield)
@@ -80,6 +82,15 @@
     - [Objectives](#objectives-7)
     - [Success Criteria](#success-criteria-7)
     - [Dependencies](#dependencies-7)
+- [5. Features](#5-features)
+  - [5.1 Features – Project Foundation](#51-features--project-foundation)
+  - [5.2 Features – Weather Providers](#52-features--weather-providers)
+  - [5.3 Features – Vehicle Integration](#53-features--vehicle-integration)
+  - [5.4 Features – Weather Risk Assessment](#54-features--weather-risk-assessment)
+  - [5.5 Features – Notifications](#55-features--notifications)
+  - [5.6 Features – Home Assistant Integration](#56-features--home-assistant-integration)
+  - [5.7 Features – Quality Assurance](#57-features--quality-assurance)
+  - [5.8 Features – Release](#58-features--release)
 
 ---
 
@@ -547,3 +558,102 @@ The Epic is considered complete when:
 ### Dependencies
 
 All previous Epics.
+
+# 5. Features
+
+The Features described in this chapter define the functional capabilities required to complete each Epic.
+
+Features represent deliverable functionality that can be planned, implemented and validated independently.
+
+Each Feature contributes directly to the Minimum Viable Product (MVP) or to the successful delivery of Version 1.0.
+
+---
+
+## 5.1 Features – Project Foundation
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Repository Setup | Configure the GitHub repository and project structure. | High | v1.0 |
+| Development Environment | Prepare the local development environment. | High | v1.0 |
+| Continuous Integration | Configure automated build and validation pipelines. | High | v1.0 |
+| Documentation Framework | Establish the project documentation structure and standards. | High | v1.0 |
+| Coding Standards | Define project coding conventions and quality rules. | Medium | v1.0 |
+
+---
+
+## 5.2 Features – Weather Providers
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Weather Provider Framework | Create the abstraction layer for weather providers. | High | v1.0 |
+| KNMI Provider | Integrate KNMI weather information. | High | v1.0 |
+| Weather Response Normalization | Convert provider responses into standardized domain objects. | High | v1.0 |
+| Provider Health Monitoring | Monitor provider availability and operational status. | Medium | v1.0 |
+| Provider Configuration | Configure weather providers through Home Assistant. | Medium | v1.0 |
+
+---
+
+## 5.3 Features – Vehicle Integration
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Tesla Integration | Retrieve Tesla vehicle information. | High | v1.0 |
+| Vehicle Status Retrieval | Retrieve the current vehicle status. | High | v1.0 |
+| Vehicle Location Retrieval | Retrieve the current vehicle location. | High | v1.0 |
+| Connectivity Monitoring | Monitor vehicle connectivity. | Medium | v1.0 |
+
+---
+
+## 5.4 Features – Weather Risk Assessment
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Weather Risk Engine | Calculate weather risks from normalized weather information. | High | v1.0 |
+| Risk Severity Calculation | Determine the severity level of identified risks. | High | v1.0 |
+| Risk Validation | Validate weather information before risk calculation. | Medium | v1.0 |
+| WeatherRisk Domain Object | Produce standardized WeatherRisk objects. | High | v1.0 |
+
+---
+
+## 5.5 Features – Notifications
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Notification Generation | Generate notifications based on WeatherRisk. | High | v1.0 |
+| Duplicate Notification Prevention | Reduce unnecessary repeated notifications. | Medium | v1.0 |
+| Notification Severity | Match notification severity to calculated weather risk. | Medium | v1.0 |
+| Notification Delivery | Deliver notifications through Home Assistant. | High | v1.0 |
+
+---
+
+## 5.6 Features – Home Assistant Integration
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Configuration Flow | Configure the integration through the Home Assistant UI. | High | v1.0 |
+| Entities | Expose sensors and entities. | High | v1.0 |
+| Diagnostics | Provide diagnostic information. | Medium | v1.0 |
+| Device Information | Register devices within Home Assistant. | Medium | v1.0 |
+| Automation Support | Enable automations using Vehicle Weather Shield entities. | High | v1.0 |
+
+---
+
+## 5.7 Features – Quality Assurance
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Unit Testing | Verify individual software components. | High | v1.0 |
+| Integration Testing | Validate interaction between components. | High | v1.0 |
+| Documentation Validation | Verify documentation consistency. | Medium | v1.0 |
+| Performance Validation | Verify performance requirements. | Medium | v1.0 |
+
+---
+
+## 5.8 Features – Release
+
+| Feature | Description | Priority | Target Release |
+|----------|-------------|----------|----------------|
+| Release Packaging | Prepare release artifacts. | High | v1.0 |
+| Version Management | Manage project versioning. | High | v1.0 |
+| HACS Publication | Publish the integration through HACS. | High | v1.0 |
+| Release Documentation | Prepare release documentation. | Medium | v1.0 |
