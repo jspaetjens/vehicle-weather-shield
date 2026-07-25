@@ -1,8 +1,8 @@
 # Vehicle Weather Shield
 
-**Version:** 0.7 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
 
 **Target Release:** v1.0.0
 
@@ -10,18 +10,19 @@
 
 **Author:** Jack Spaetjens
 
-**Last Updated:** 2026-07-24
+**Last Updated:** 2026-07-25
 
 ---
 | Version | Date | Author | Description |
-|----------|------------|-----------------|----------------------------------------------|
+|----------|------------|-----------------|-------------------------------------------------------------|
 | 0.1 | 2026-07-24 | Jack Spaetjens | Initial roadmap structure. |
 | 0.2 | 2026-07-24 | Jack Spaetjens | Added development strategy describing the implementation philosophy and development principles. |
 | 0.3 | 2026-07-24 | Jack Spaetjens | Added the product roadmap describing the planned development phases. |
 | 0.4 | 2026-07-24 | Jack Spaetjens | Added implementation epics defining the major functional areas of the solution. |
 | 0.5 | 2026-07-24 | Jack Spaetjens | Added features grouped by epic, including priorities and target release planning. |
 | 0.6 | 2026-07-24 | Jack Spaetjens | Added the initial product backlog containing implementation-ready user stories for Version 1.0. |
-| 0.7 | 2026-07-24 | Jack Spaetjens | Added release planning, release milestones and versioning strategy for Version 1.0.
+| 0.7 | 2026-07-24 | Jack Spaetjens | Added release planning, milestones and versioning strategy for Version 1.0. |
+| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 roadmap baseline. |
 
 ---
 - [Vehicle Weather Shield](#vehicle-weather-shield)
@@ -826,7 +827,7 @@ Where:
 
 ## 7.4 Roadmap Maintenance
 
-The roadmap is considered a living planning document.
+The roadmap remains a living planning document after the Version 1.0 baseline has been established.
 
 Future versions may introduce additional Epics, Features and User Stories as the project evolves.
 
