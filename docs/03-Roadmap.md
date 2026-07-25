@@ -1,6 +1,6 @@
 # Vehicle Weather Shield
 
-**Version:** 0.6 (Draft)
+**Version:** 0.7 (Draft)
 
 **Status:** Draft
 
@@ -21,6 +21,7 @@
 | 0.4 | 2026-07-24 | Jack Spaetjens | Added implementation epics defining the major functional areas of the solution. |
 | 0.5 | 2026-07-24 | Jack Spaetjens | Added features grouped by epic, including priorities and target release planning. |
 | 0.6 | 2026-07-24 | Jack Spaetjens | Added the initial product backlog containing implementation-ready user stories for Version 1.0. |
+| 0.7 | 2026-07-24 | Jack Spaetjens | Added release planning, release milestones and versioning strategy for Version 1.0.
 
 ---
 - [Vehicle Weather Shield](#vehicle-weather-shield)
@@ -101,6 +102,11 @@
   - [6.6 Home Assistant Integration](#66-home-assistant-integration)
   - [6.7 Quality Assurance](#67-quality-assurance)
   - [6.8 Release](#68-release)
+- [7. Release Planning](#7-release-planning)
+  - [7.1 Version 1.0 Objectives](#71-version-10-objectives)
+  - [7.2 Release Milestones](#72-release-milestones)
+  - [7.3 Versioning Strategy](#73-versioning-strategy)
+  - [7.4 Roadmap Maintenance](#74-roadmap-maintenance)
 
 ---
 
@@ -758,3 +764,70 @@ Each User Story shall be refined into implementation tasks within Azure DevOps p
 | RL-001 | As a user, I want Vehicle Weather Shield to be installable through HACS. | High |
 | RL-002 | As a maintainer, I want versioned releases so that software updates remain traceable. | High |
 | RL-003 | As a maintainer, I want release documentation so that users understand each release. | Medium |
+
+---
+
+# 7. Release Planning
+
+The initial development roadmap is focused on delivering Version 1.0 of Vehicle Weather Shield.
+
+The release planning described in this chapter defines the major milestones required to reach the first public release.
+
+Detailed release procedures, deployment activities and publication processes are documented separately in the Release document.
+
+---
+
+## 7.1 Version 1.0 Objectives
+
+Version 1.0 shall provide a complete and stable Minimum Viable Product.
+
+The release objectives include:
+
+- reliable weather provider integration;
+- Tesla vehicle integration;
+- weather risk assessment;
+- Home Assistant integration;
+- notification services;
+- automated testing;
+- HACS publication;
+- complete project documentation.
+
+---
+
+## 7.2 Release Milestones
+
+| Milestone | Description |
+|-----------|-------------|
+| Architecture Baseline | Architecture approved for implementation. |
+| Roadmap Baseline | Roadmap completed and approved. |
+| Development Complete | All Version 1.0 Features implemented. |
+| Feature Freeze | Functional development completed. |
+| Testing Complete | Validation and quality assurance completed. |
+| Release Candidate | Candidate release prepared for final validation. |
+| Version 1.0 Release | Public release through GitHub and HACS. |
+
+---
+
+## 7.3 Versioning Strategy
+
+Vehicle Weather Shield follows Semantic Versioning.
+
+Version numbering shall follow the format:
+
+Major.Minor.Patch
+
+Where:
+
+- Major versions introduce significant functional or architectural changes.
+- Minor versions introduce new functionality while maintaining backward compatibility.
+- Patch versions contain defect corrections and minor improvements.
+
+---
+
+## 7.4 Roadmap Maintenance
+
+The roadmap is considered a living planning document.
+
+Future versions may introduce additional Epics, Features and User Stories as the project evolves.
+
+Changes shall remain aligned with the Product Requirements Document and the Architecture document.
