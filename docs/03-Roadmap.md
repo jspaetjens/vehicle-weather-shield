@@ -26,8 +26,11 @@
 | 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 roadmap baseline. |
 
 ---
+
+## Table of Contents
 - [Vehicle Weather Shield](#vehicle-weather-shield)
   - [Development Roadmap](#development-roadmap)
+  - [Table of Contents](#table-of-contents)
 - [1. Purpose](#1-purpose)
   - [1.1 Objective](#11-objective)
   - [1.2 Scope](#12-scope)

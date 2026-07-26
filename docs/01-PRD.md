@@ -21,16 +21,18 @@
 
 | Version | Date | Author | Description |
 |----------|------------|----------------|---------------------------------------------------------|
-| 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure. |
-| 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases. |
-| 0.3 | 2026-07-23 | Jack Spaetjens | Reviewed and stabilized PRD, refined requirements and completed use cases. |
-| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline. |
+| 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure.|
+| 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases.|
+| 0.3 | 2026-07-23 | Jack Spaetjens | Reviewed and stabilized PRD, refined requirements and completed use cases.|
+| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline.|
+
 ---
 
+## Table of Contents
 - [Vehicle Weather Shield](#vehicle-weather-shield)
   - [Product Requirements Document](#product-requirements-document)
   - [Document History](#document-history)
-  - [| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline. |](#-10--2026-07-25--jack-spaetjens--approved-after-editorial-review-and-established-as-the-version-10-product-requirements-baseline-)
+  - [Table of Contents](#table-of-contents)
 - [1. Introduction](#1-introduction)
 - [2. Vision](#2-vision)
 - [3. Goals](#3-goals)

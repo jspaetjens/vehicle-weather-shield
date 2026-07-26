@@ -29,9 +29,12 @@
 
 ---
 
+## Table of Contents
+
 - [Vehicle Weather Shield](#vehicle-weather-shield)
   - [Software Architecture Document](#software-architecture-document)
   - [Document History](#document-history)
+  - [Table of Contents](#table-of-contents)
 - [1. Purpose](#1-purpose)
   - [1.1 Objective](#11-objective)
   - [1.2 Scope](#12-scope)
@@ -105,7 +108,6 @@
   - [7.4 Advanced Risk Assessment](#74-advanced-risk-assessment)
   - [7.5 Additional Notification Channels](#75-additional-notification-channels)
   - [7.6 Community Contributions](#76-community-contributions)
-
 
 ---
 

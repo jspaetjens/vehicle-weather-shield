@@ -26,9 +26,12 @@
 
 ---
 
+## Table of Contents
+
 - [Vehicle Weather Shield](#vehicle-weather-shield)
   - [Development Standards Document](#development-standards-document)
   - [Document History](#document-history)
+  - [Table of Contents](#table-of-contents)
 - [1. Introduction](#1-introduction)
   - [1.1 Purpose](#11-purpose)
   - [1.2 Scope](#12-scope)
@@ -45,6 +48,7 @@
   - [3.3 Numbering](#33-numbering)
   - [3.4 Version Management](#34-version-management)
   - [3.5 Review Process](#35-review-process)
+  - [3.6 Documentation Tooling](#36-documentation-tooling)
 - [4. Coding Standards](#4-coding-standards)
   - [4.1 General Principles](#41-general-principles)
   - [4.2 Naming Conventions](#42-naming-conventions)
@@ -260,6 +264,17 @@ The review shall verify:
 - alignment with related documentation.
 
 New functionality or design decisions shall not be introduced during an editorial review.
+
+---
+
+## 3.6 Documentation Tooling
+
+Daar kunnen we formeel vastleggen:
+
+Auto-generated Table of Contents is projectstandaard.
+TOC wordt niet handmatig aangepast.
+Reviews controleren alleen of de TOC aanwezig en correct gegenereerd is.
+Tool-generated content valt buiten inhoudelijke review, tenzij aantoonbaar onjuist.
 
 ---
 
