@@ -1,7 +1,7 @@
 # Vehicle Weather Shield
 ## Testing Strategy
 
-**Version:** 0.1 (Draft)
+**Version:** 0.2 (Draft)
 
 **Status:** Draft
 
@@ -20,12 +20,62 @@
 | Version | Date | Author | Description |
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Testing Strategy including the introduction, testing philosophy, test levels, test types and test environment. |
+| 0.2 | 2026-07-26 | Jack Spaetjens | Added test data, test automation, defect management, acceptance criteria and future testing strategy, completing the initial Testing Strategy document. |
 
 ---
 
 ## Table of Contents
 
-> Auto-generated
+- [Vehicle Weather Shield](#vehicle-weather-shield)
+  - [Testing Strategy](#testing-strategy)
+  - [Document History](#document-history)
+  - [Table of Contents](#table-of-contents)
+- [1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Scope](#12-scope)
+  - [1.3 Relationship to Other Documents](#13-relationship-to-other-documents)
+- [2. Testing Philosophy](#2-testing-philosophy)
+  - [2.1 Quality First](#21-quality-first)
+  - [2.2 Incremental Testing](#22-incremental-testing)
+  - [2.3 Repeatability](#23-repeatability)
+  - [2.4 Traceability](#24-traceability)
+- [3. Test Levels](#3-test-levels)
+  - [3.1 Unit Testing](#31-unit-testing)
+  - [3.2 Integration Testing](#32-integration-testing)
+  - [3.3 System Testing](#33-system-testing)
+  - [3.4 Acceptance Testing](#34-acceptance-testing)
+- [4. Test Types](#4-test-types)
+  - [4.1 Functional Testing](#41-functional-testing)
+  - [4.2 Regression Testing](#42-regression-testing)
+  - [4.3 Error Handling Testing](#43-error-handling-testing)
+  - [4.4 User Acceptance Testing](#44-user-acceptance-testing)
+- [5. Test Environment](#5-test-environment)
+  - [5.1 Development Environment](#51-development-environment)
+  - [5.2 Home Assistant Test Environment](#52-home-assistant-test-environment)
+  - [5.3 External Dependencies](#53-external-dependencies)
+  - [5.4 Environment Consistency](#54-environment-consistency)
+- [6. Test Data](#6-test-data)
+  - [6.1 Test Data Quality](#61-test-data-quality)
+  - [6.2 Test Data Isolation](#62-test-data-isolation)
+  - [6.3 Data Consistency](#63-data-consistency)
+  - [6.4 Sensitive Information](#64-sensitive-information)
+- [7. Test Automation](#7-test-automation)
+  - [7.1 Automated Verification](#71-automated-verification)
+  - [7.2 Continuous Validation](#72-continuous-validation)
+  - [7.3 Manual Testing](#73-manual-testing)
+  - [7.4 Automation Maintenance](#74-automation-maintenance)
+- [8. Defect Management](#8-defect-management)
+  - [8.1 Defect Identification](#81-defect-identification)
+  - [8.2 Defect Classification](#82-defect-classification)
+  - [8.3 Defect Resolution](#83-defect-resolution)
+  - [8.4 Continuous Improvement](#84-continuous-improvement)
+- [9. Acceptance Criteria](#9-acceptance-criteria)
+  - [9.1 Functional Acceptance](#91-functional-acceptance)
+  - [9.2 Quality Acceptance](#92-quality-acceptance)
+  - [9.3 Documentation Acceptance](#93-documentation-acceptance)
+  - [9.4 Release Readiness](#94-release-readiness)
+- [10. Future Testing Strategy](#10-future-testing-strategy)
+
 
 ---
 
@@ -231,3 +281,175 @@ Configuration differences between environments should be minimized wherever prac
 
 ---
 
+# 6. Test Data
+
+Reliable testing requires representative and controlled test data.
+
+Test data shall support functional verification without exposing sensitive or personal information.
+
+---
+
+## 6.1 Test Data Quality
+
+Test data should accurately represent realistic operational scenarios.
+
+Artificial or simulated data may be used whenever appropriate.
+
+---
+
+## 6.2 Test Data Isolation
+
+Testing should not depend on production data whenever practical.
+
+Separate datasets shall be used for development, integration and acceptance testing.
+
+---
+
+## 6.3 Data Consistency
+
+Test datasets should remain consistent throughout repeated test executions.
+
+Changes to test data shall be documented when they affect test outcomes.
+
+---
+
+## 6.4 Sensitive Information
+
+Sensitive or personal information shall never be included within project test datasets.
+
+Where required, data shall be anonymised or simulated.
+
+---
+
+# 7. Test Automation
+
+Automation improves testing consistency, repeatability and development efficiency.
+
+Automated testing shall be introduced whenever practical.
+
+---
+
+## 7.1 Automated Verification
+
+Frequently executed tests should be automated to reduce manual effort.
+
+Automation increases confidence during iterative software development.
+
+---
+
+## 7.2 Continuous Validation
+
+Automated validation should be integrated into the development workflow where appropriate.
+
+Validation activities may include:
+
+- static analysis;
+- automated testing;
+- build verification.
+
+---
+
+## 7.3 Manual Testing
+
+Not every verification activity can be automated.
+
+Manual testing remains valuable for:
+
+- exploratory testing;
+- usability evaluation;
+- visual verification;
+- real-world validation.
+
+---
+
+## 7.4 Automation Maintenance
+
+Automated tests shall be maintained together with the software they verify.
+
+Obsolete or unreliable tests should be updated or removed.
+
+---
+
+# 8. Defect Management
+
+Software defects shall be identified, documented and resolved using a structured process.
+
+The objective is to ensure consistent handling of discovered issues throughout the project.
+
+---
+
+## 8.1 Defect Identification
+
+Discovered defects should be documented with sufficient information to reproduce the observed behaviour.
+
+---
+
+## 8.2 Defect Classification
+
+Defects may be classified according to:
+
+- severity;
+- impact;
+- reproducibility;
+- affected functionality.
+
+Classification supports prioritisation during development.
+
+---
+
+## 8.3 Defect Resolution
+
+Resolved defects should be verified before being considered closed.
+
+Verification should confirm both the implemented correction and the absence of unintended side effects.
+
+---
+
+## 8.4 Continuous Improvement
+
+Recurring defects should be analysed to identify opportunities for improving software quality and development practices.
+
+
+# 9. Acceptance Criteria
+
+Acceptance criteria define the conditions required before software may be considered ready for release.
+
+Acceptance verification shall remain objective and traceable.
+
+---
+
+## 9.1 Functional Acceptance
+
+Implemented functionality shall satisfy the documented project requirements.
+
+---
+
+## 9.2 Quality Acceptance
+
+Software shall comply with the established Development Standards before acceptance.
+
+---
+
+## 9.3 Documentation Acceptance
+
+Documentation shall accurately reflect the implemented functionality.
+
+Documentation shall be reviewed together with the software whenever applicable.
+
+---
+
+## 9.4 Release Readiness
+
+Software shall only proceed towards release after successful completion of the agreed acceptance activities.
+
+---
+
+# 10. Future Testing Strategy
+
+The Testing Strategy is expected to evolve together with the Vehicle Weather Shield project.
+
+Future revisions may introduce additional testing techniques, tooling and quality metrics while preserving the established testing philosophy.
+
+Changes to the testing strategy shall be documented through the Document History and reviewed before becoming part of a future baseline.
+
+---
