@@ -1,8 +1,10 @@
 # Vehicle Weather Shield
 
-**Version:** 0.3 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
+
+**Last Updated:** 2026-07-25
 
 **Target Release:** v1.0.0
 
@@ -10,20 +12,19 @@
 
 **Author:** Jack Spaetjens
 
-**Last Updated:** 2026-07-21
-
 ## Document History
 
 | Version | Date | Author | Description |
-|----------|------------|----------------|----------------------------------------------|
-| 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure |
-| 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases |
-| 0.3 | 2026-07-23 | Jack Spaetjens | Reviewed and stabilized PRD, refined requirements and completed use cases |
-
+|----------|------------|----------------|---------------------------------------------------------|
+| 0.1 | 2026-07-19 | Jack Spaetjens | Initial PRD structure. |
+| 0.2 | 2026-07-20 | Jack Spaetjens | Completed first draft with requirements and use cases. |
+| 0.3 | 2026-07-23 | Jack Spaetjens | Reviewed and stabilized PRD, refined requirements and completed use cases. |
+| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline. |
 ---
 
 - [Vehicle Weather Shield](#vehicle-weather-shield)
   - [Document History](#document-history)
+  - [| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline. |](#-10--2026-07-25--jack-spaetjens--approved-after-editorial-review-and-established-as-the-version-10-product-requirements-baseline-)
 - [1. Introduction](#1-introduction)
 - [2. Vision](#2-vision)
 - [3. Goals](#3-goals)
