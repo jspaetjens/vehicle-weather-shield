@@ -1,7 +1,7 @@
 # Vehicle Weather Shield
 ## Development Standards
 
-**Version:** 0.1 (Draft)
+**Version:** 0.2 (Draft)
 
 **Status:** Draft
 
@@ -13,10 +13,14 @@
 
 **Author:** Jack Spaetjens
 
+---
+
+## Document History
+
 | Version | Date | Author | Description |
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Development document including the introduction, development philosophy and documentation standards. |
-
+| 0.2 | 2026-07-26 | Jack Spaetjens | Added coding standards, version control, development workflow and quality assurance guidelines.
 
 # 1. Introduction
 
@@ -200,4 +204,266 @@ The review shall verify:
 - alignment with related documentation.
 
 New functionality or design decisions shall not be introduced during an editorial review.
+
+---
+
+# 4. Coding Standards
+
+The Vehicle Weather Shield project follows a consistent coding standard to improve readability, maintainability and long-term software quality.
+
+All source code shall follow the same conventions throughout the project, regardless of the contributor or implementation phase.
+
+The objective is to ensure that every source file appears as though it was written by a single developer.
+
+---
+
+## 4.1 General Principles
+
+Source code shall be:
+
+- readable;
+- maintainable;
+- modular;
+- self-explanatory where possible;
+- thoroughly documented where necessary.
+
+Code readability shall always take precedence over writing fewer lines of code.
+
+Whenever multiple implementation approaches are possible, the simplest maintainable solution shall be preferred.
+
+---
+
+## 4.2 Naming Conventions
+
+Consistent naming shall be used throughout the project.
+
+The project follows standard Python naming conventions.
+
+| Element | Convention | Example |
+|----------|------------|---------|
+| Classes | PascalCase | `WeatherProvider` |
+| Functions | snake_case | `calculate_weather_risk()` |
+| Variables | snake_case | `weather_response` |
+| Constants | UPPER_CASE | `DEFAULT_TIMEOUT` |
+| Private Members | Leading underscore | `_weather_cache` |
+
+Names shall be descriptive and avoid unnecessary abbreviations.
+
+---
+
+## 4.3 Source File Organization
+
+Source files shall follow a consistent internal structure whenever applicable.
+
+Recommended order:
+
+1. Module documentation
+2. Imports
+3. Constants
+4. Enumerations
+5. Exceptions
+6. Data models
+7. Public classes
+8. Private helper classes
+9. Helper functions
+
+Maintaining a consistent structure improves navigation throughout the project.
+
+---
+
+## 4.4 Documentation
+
+Every public class and public method shall contain a descriptive docstring.
+
+Documentation shall describe the purpose and expected behaviour rather than the implementation details.
+
+Inline comments should explain *why* code exists instead of *what* the code does.
+
+Temporary comments such as TODO statements shall remain limited and be resolved before stable releases whenever possible.
+
+---
+
+# 5. Version Control
+
+Version control is managed using Git.
+
+All project artifacts shall be stored within the Git repository to ensure complete traceability and version history.
+
+Git shall serve as the single source of truth for the project.
+
+---
+
+## 5.1 Branch Strategy
+
+Development shall take place using dedicated Git branches.
+
+The default development branch is:
+
+- develop
+
+Future release branches and maintenance branches may be introduced when required.
+
+---
+
+## 5.2 Commit Standards
+
+Every commit shall represent one logical change.
+
+Commit messages shall remain concise, descriptive and written in English.
+
+The project follows the following format:
+
+```
+type(scope): short summary
+```
+
+Examples:
+
+```
+docs(prd): establish v1.0 baseline
+docs(api): add weather provider specification
+feat(core): implement weather normalization
+fix(notification): prevent duplicate alerts
+```
+
+A second commit message shall describe the implemented changes in more detail.
+
+---
+
+## 5.3 Commit Scope
+
+Commits should remain focused on a single logical change.
+
+Large unrelated modifications shall be separated into individual commits whenever possible.
+
+---
+
+## 5.4 Repository Structure
+
+The repository structure shall remain stable throughout the project.
+
+Documentation, source code, tests and configuration files shall remain clearly separated.
+
+Project directories shall only be reorganized after careful consideration.
+
+---
+
+# 6. Development Workflow
+
+Development follows an incremental workflow.
+
+Every implementation shall progress through clearly defined stages before becoming part of the main project.
+
+---
+
+## 6.1 Planning
+
+Every new feature originates from the Product Roadmap.
+
+Implementation starts only after the feature has been sufficiently defined.
+
+---
+
+## 6.2 Implementation
+
+Development shall focus on a single feature or logical task at a time.
+
+Partially completed work should remain isolated until it is considered stable.
+
+---
+
+## 6.3 Review
+
+Every completed implementation shall undergo an editorial or technical review.
+
+Reviews verify:
+
+- consistency;
+- readability;
+- maintainability;
+- compliance with project standards.
+
+---
+
+## 6.4 Testing
+
+Implemented functionality shall be verified before integration.
+
+Testing activities are described in detail within the Testing Strategy document.
+
+---
+
+## 6.5 Integration
+
+After successful review and validation, the implementation may be integrated into the project.
+
+The Git history should clearly reflect the development process.
+
+---
+
+# 7. Quality Assurance
+
+Software quality is considered a continuous activity throughout the complete development lifecycle.
+
+Quality assurance combines documentation, code reviews, testing and automated validation.
+
+---
+
+## 7.1 Editorial Reviews
+
+Documentation shall undergo editorial review before becoming part of a baseline release.
+
+Editorial reviews verify:
+
+- completeness;
+- consistency;
+- formatting;
+- terminology;
+- logical structure.
+
+Editorial reviews shall not introduce new functionality.
+
+---
+
+## 7.2 Code Reviews
+
+Source code shall be reviewed before being accepted into the project.
+
+Reviews should verify:
+
+- readability;
+- maintainability;
+- consistency;
+- architectural compliance;
+- documentation quality.
+
+---
+
+## 7.3 Automated Validation
+
+Where appropriate, automated validation shall be used to verify project quality.
+
+Examples include:
+
+- linting;
+- formatting;
+- unit testing;
+- continuous integration.
+
+The exact tooling is documented separately as the project evolves.
+
+---
+
+## 7.4 Continuous Improvement
+
+Project standards shall be reviewed periodically.
+
+Improvements may be introduced when they improve software quality or project maintainability.
+
+Changes to established project standards shall be documented and applied consistently across the project.
+
+---
+
+
+
 
