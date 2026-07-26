@@ -1,4 +1,5 @@
 # Vehicle Weather Shield
+## Software Architecture Document
 
 **Version:** 1.0
 
@@ -29,6 +30,7 @@
 ---
 
 - [Vehicle Weather Shield](#vehicle-weather-shield)
+  - [Software Architecture Document](#software-architecture-document)
   - [Document History](#document-history)
 - [1. Purpose](#1-purpose)
   - [1.1 Objective](#11-objective)

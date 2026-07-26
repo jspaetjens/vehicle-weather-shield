@@ -1,4 +1,7 @@
 # Vehicle Weather Shield
+## Product Requirements Document
+
+> *Every minute of early warning increases the opportunity for vehicle owners to move their vehicle to safety before severe weather arrives.*
 
 **Version:** 1.0
 
@@ -12,6 +15,8 @@
 
 **Author:** Jack Spaetjens
 
+---
+
 ## Document History
 
 | Version | Date | Author | Description |
@@ -23,6 +28,7 @@
 ---
 
 - [Vehicle Weather Shield](#vehicle-weather-shield)
+  - [Product Requirements Document](#product-requirements-document)
   - [Document History](#document-history)
   - [| 1.0 | 2026-07-25 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 product requirements baseline. |](#-10--2026-07-25--jack-spaetjens--approved-after-editorial-review-and-established-as-the-version-10-product-requirements-baseline-)
 - [1. Introduction](#1-introduction)

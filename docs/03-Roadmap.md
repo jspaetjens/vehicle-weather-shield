@@ -1,16 +1,17 @@
 # Vehicle Weather Shield
+## Development Roadmap
 
 **Version:** 1.0
 
 **Status:** Baseline
+
+**Last Updated:** 2026-07-25
 
 **Target Release:** v1.0.0
 
 **License:** MIT
 
 **Author:** Jack Spaetjens
-
-**Last Updated:** 2026-07-25
 
 ---
 | Version | Date | Author | Description |
@@ -26,6 +27,7 @@
 
 ---
 - [Vehicle Weather Shield](#vehicle-weather-shield)
+  - [Development Roadmap](#development-roadmap)
 - [1. Purpose](#1-purpose)
   - [1.1 Objective](#11-objective)
   - [1.2 Scope](#12-scope)
