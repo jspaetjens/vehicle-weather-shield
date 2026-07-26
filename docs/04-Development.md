@@ -1,9 +1,9 @@
 # Vehicle Weather Shield
-## Development Standards
+## Development Standards Document
 
-**Version:** 0.3 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
 
 **Last Updated:** 2026-07-26
 
@@ -20,13 +20,14 @@
 | Version | Date | Author | Description |
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Development document including the introduction, development philosophy and documentation standards. |
-| 0.2 | 2026-07-26 | Jack Spaetjens | Added coding standards, version control, development workflow and quality assurance guidelines.
+| 0.2 | 2026-07-26 | Jack Spaetjens | Added coding standards, version control, development workflow and quality assurance guidelines. |
 | 0.3 | 2026-07-26 | Jack Spaetjens | Added development environment, definition of done and future development guidelines, completing the initial Development document. |
+| 1.0 | 2026-07-26 | Jack Spaetjens | Approved after editorial review and established as the Version 1.0 development standards baseline. |
 
 ---
 
 - [Vehicle Weather Shield](#vehicle-weather-shield)
-  - [Development Standards](#development-standards)
+  - [Development Standards Document](#development-standards-document)
   - [Document History](#document-history)
 - [1. Introduction](#1-introduction)
   - [1.1 Purpose](#11-purpose)
@@ -535,7 +536,7 @@ The project primarily uses the following development tools:
 - Git
 - GitHub
 - Python
-- Home Assistant Development Environment
+- Home Assistant Developer Environment
 
 Additional tools may be introduced as the project evolves.
 
