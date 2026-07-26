@@ -1,7 +1,7 @@
 # Vehicle Weather Shield
 ## Development Standards
 
-**Version:** 0.2 (Draft)
+**Version:** 0.3 (Draft)
 
 **Status:** Draft
 
@@ -21,6 +21,61 @@
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Development document including the introduction, development philosophy and documentation standards. |
 | 0.2 | 2026-07-26 | Jack Spaetjens | Added coding standards, version control, development workflow and quality assurance guidelines.
+| 0.3 | 2026-07-26 | Jack Spaetjens | Added development environment, definition of done and future development guidelines, completing the initial Development document. |
+
+---
+
+- [Vehicle Weather Shield](#vehicle-weather-shield)
+  - [Development Standards](#development-standards)
+  - [Document History](#document-history)
+- [1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Scope](#12-scope)
+  - [1.3 Relationship to Other Documents](#13-relationship-to-other-documents)
+- [2. Development Philosophy](#2-development-philosophy)
+  - [2.1 Consistency](#21-consistency)
+  - [2.2 Simplicity](#22-simplicity)
+  - [2.3 Maintainability](#23-maintainability)
+  - [2.4 Incremental Development](#24-incremental-development)
+  - [2.5 Quality Before Quantity](#25-quality-before-quantity)
+- [3. Documentation Standards](#3-documentation-standards)
+  - [3.1 Document Structure](#31-document-structure)
+  - [3.2 Writing Style](#32-writing-style)
+  - [3.3 Numbering](#33-numbering)
+  - [3.4 Version Management](#34-version-management)
+  - [3.5 Review Process](#35-review-process)
+- [4. Coding Standards](#4-coding-standards)
+  - [4.1 General Principles](#41-general-principles)
+  - [4.2 Naming Conventions](#42-naming-conventions)
+  - [4.3 Source File Organization](#43-source-file-organization)
+  - [4.4 Documentation](#44-documentation)
+- [5. Version Control](#5-version-control)
+  - [5.1 Branch Strategy](#51-branch-strategy)
+  - [5.2 Commit Standards](#52-commit-standards)
+  - [5.3 Commit Scope](#53-commit-scope)
+  - [5.4 Repository Structure](#54-repository-structure)
+- [6. Development Workflow](#6-development-workflow)
+  - [6.1 Planning](#61-planning)
+  - [6.2 Implementation](#62-implementation)
+  - [6.3 Review](#63-review)
+  - [6.4 Testing](#64-testing)
+  - [6.5 Integration](#65-integration)
+- [7. Quality Assurance](#7-quality-assurance)
+  - [7.1 Editorial Reviews](#71-editorial-reviews)
+  - [7.2 Code Reviews](#72-code-reviews)
+  - [7.3 Automated Validation](#73-automated-validation)
+  - [7.4 Continuous Improvement](#74-continuous-improvement)
+- [8. Development Environment](#8-development-environment)
+  - [8.1 Supported Development Tools](#81-supported-development-tools)
+  - [8.2 Environment Configuration](#82-environment-configuration)
+  - [8.3 Dependency Management](#83-dependency-management)
+- [9. Definition of Done](#9-definition-of-done)
+  - [9.1 Completion Criteria](#91-completion-criteria)
+  - [9.2 Documentation](#92-documentation)
+  - [9.3 Quality Verification](#93-quality-verification)
+- [10. Future Development](#10-future-development)
+
+---
 
 # 1. Introduction
 
@@ -464,6 +519,98 @@ Changes to established project standards shall be documented and applied consist
 
 ---
 
+# 8. Development Environment
 
+A consistent development environment improves productivity, reduces configuration issues and ensures predictable software behaviour across different development systems.
+
+The project shall maintain a reproducible development environment throughout its lifecycle.
+
+---
+
+## 8.1 Supported Development Tools
+
+The project primarily uses the following development tools:
+
+- Visual Studio Code
+- Git
+- GitHub
+- Python
+- Home Assistant Development Environment
+
+Additional tools may be introduced as the project evolves.
+
+---
+
+## 8.2 Environment Configuration
+
+Development environments should remain as consistent as possible across all contributors.
+
+Project-specific configuration files shall be maintained within the repository whenever practical.
+
+Machine-specific configuration files should remain outside the repository.
+
+---
+
+## 8.3 Dependency Management
+
+External dependencies shall remain limited to those required by the project.
+
+Dependencies should:
+
+- be actively maintained;
+- have a stable release history;
+- be compatible with the project license;
+- provide long-term support where applicable.
+
+Unused dependencies should be removed whenever possible.
+
+---
+
+# 9. Definition of Done
+
+A development task shall only be considered complete after satisfying all agreed project quality criteria.
+
+Completion of source code alone does not constitute completion of a feature.
+
+---
+
+## 9.1 Completion Criteria
+
+A task is considered complete when:
+
+- implementation has been completed;
+- documentation has been updated where required;
+- code has been reviewed;
+- testing has been successfully completed;
+- project standards have been followed;
+- changes have been committed to version control.
+
+---
+
+## 9.2 Documentation
+
+Documentation shall remain synchronized with software development.
+
+Whenever functionality changes, the corresponding documentation shall be reviewed and updated if necessary.
+
+---
+
+## 9.3 Quality Verification
+
+Before integration into the project, every completed task shall satisfy the agreed quality requirements.
+
+Incomplete implementations shall not be considered finished merely because they compile or execute successfully.
+
+---
+
+# 10. Future Development
+
+The Development Standards document is intended to evolve together with the Vehicle Weather Shield project.
+
+As the project matures, additional development practices, tooling and quality guidelines may be incorporated.
+
+Future revisions shall preserve the existing structure and remain consistent with the established project standards.
+
+Changes to this document shall be documented through the Document History and reviewed before becoming part of a new baseline.
 
 
