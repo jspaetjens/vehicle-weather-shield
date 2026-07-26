@@ -1,16 +1,16 @@
 # Vehicle Weather Shield
 
-**Version:** 1.0 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
+
+**Last Updated:** 2026-07-25
 
 **Target Release:** v1.0.0
 
 **License:** MIT
 
 **Author:** Jack Spaetjens
-
-**Last Updated:** 2026-07-24
 
 ## Document History
 
