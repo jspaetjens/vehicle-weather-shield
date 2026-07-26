@@ -1,3 +1,14 @@
-eerste opzet van PRD deze slogan valt op en zetten we straks ook in README
+# Vehicle Weather Shield
+## Release Management
 
-> Every minute of early warning increases the opportunity for vehicle owners to move their vehicle to safety before severe weather arrives.
+**Version:** 0.1 (Draft)
+
+**Status:** Draft
+
+**Last Updated:** 2026-07-26
+
+**Target Release:** v1.0.0
+
+**License:** MIT
+
+**Author:** Jack Spaetjens
