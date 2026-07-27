@@ -13,6 +13,8 @@
 
 **Author:** Jack Spaetjens
 
+---
+
 ## Document History
 
 | Version | Date | Author | Description |
