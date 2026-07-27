@@ -1,3 +1,6 @@
+
+## Table of Contents
+
 - [1. Purpose](#1-purpose)
 - [2. General Collaboration Principles](#2-general-collaboration-principles)
 - [3. Documentation Principles](#3-documentation-principles)
@@ -12,6 +15,7 @@
 - [12. Decision Authority](#12-decision-authority)
 - [13. Continuous Improvement](#13-continuous-improvement)
 
+---
 
 # 1. Purpose
 
