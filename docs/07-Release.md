@@ -1,11 +1,11 @@
 # Vehicle Weather Shield
 ## Release Management
 
-**Version:** 0.2 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
 
-**Last Updated:** 2026-07-26
+**Last Updated:** 2026-07-27
 
 **Target Release:** v1.0.0
 
@@ -21,6 +21,7 @@
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Release Management document including the introduction, release philosophy, versioning strategy, release process and deployment strategy. |
 | 0.2 | 2026-07-26 | Jack Spaetjens | Added release validation, maintenance releases, documentation management, release governance and future release strategy, completing the initial Release Management document. |
+| 1.0 | 2026-07-27 | Jack Spaetjens | Editorial review completed. Promoted to Version 1.0 Baseline. |
 
 ---
 
@@ -447,6 +448,6 @@ The Release Management document is expected to evolve together with the Vehicle 
 
 Future revisions may introduce additional release procedures, automation and governance practices while preserving the established release philosophy.
 
-Changes to release management shall be documented through the Document History and reviewed before becoming part of a future baseline.
+Changes to release management shall be documented through the Document History and reviewed before inclusion in a future baseline.
 
 ---
