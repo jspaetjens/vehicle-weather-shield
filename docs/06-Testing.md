@@ -1,11 +1,11 @@
 # Vehicle Weather Shield
 ## Testing Strategy
 
-**Version:** 0.2 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
 
-**Last Updated:** 2026-07-26
+**Last Updated:** 2026-07-27
 
 **Target Release:** v1.0.0
 
@@ -21,6 +21,7 @@
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial Testing Strategy including the introduction, testing philosophy, test levels, test types and test environment. |
 | 0.2 | 2026-07-26 | Jack Spaetjens | Added test data, test automation, defect management, acceptance criteria and future testing strategy, completing the initial Testing Strategy document. |
+| 1.0 | 2026-07-27 | Jack Spaetjens | Editorial review completed. Promoted to Version 1.0 Baseline. |
 
 ---
 
@@ -277,7 +278,7 @@ Provider-specific failures should not unnecessarily influence unrelated testing 
 
 Testing environments should remain consistent throughout the project.
 
-Configuration differences between environments should be minimized wherever practical.
+Configuration differences between environments should be minimised wherever practical.
 
 ---
 
@@ -450,6 +451,6 @@ The Testing Strategy is expected to evolve together with the Vehicle Weather Shi
 
 Future revisions may introduce additional testing techniques, tooling and quality metrics while preserving the established testing philosophy.
 
-Changes to the testing strategy shall be documented through the Document History and reviewed before becoming part of a future baseline.
+Changes to the testing strategy shall be documented through the Document History and reviewed before inclusion in a future baseline.
 
 ---
