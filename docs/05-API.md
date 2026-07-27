@@ -1,11 +1,11 @@
 # Vehicle Weather Shield
 ## API Specification
 
-**Version:** 0.2 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Baseline
 
-**Last Updated:** 2026-07-26
+**Last Updated:** 2026-07-27
 
 **Target Release:** v1.0.0
 
@@ -21,6 +21,7 @@
 |----------|------------|-----------------|-----------------------------------------------------------|
 | 0.1 | 2026-07-26 | Jack Spaetjens | Created the initial API Specification including the introduction, API design principles, internal interfaces, Home Assistant integration and weather provider interfaces. |
 | 0.2 | 2026-07-26 | Jack Spaetjens | Added vehicle integration, notification interfaces, data models, error handling and future API extension guidelines, completing the initial API Specification. |
+| 1.0 | 2026-07-26 | Jack Spaetjens | Editorial review completed. Promoted to Version 1.0 Baseline. |
 
 ---
 
@@ -130,7 +131,7 @@ Interfaces shall remain stable, predictable and independent from internal implem
 
 ## 2.1 Consistency
 
-Every interface shall follow consistent naming conventions, response structures and error handling.
+Every interface shall follow consistent naming conventions, interface structures and error handling.
 
 Consistency reduces implementation complexity and improves maintainability.
 
@@ -306,7 +307,7 @@ Vehicle integrations are responsible for:
 - obtaining vehicle location;
 - determining vehicle availability;
 - retrieving vehicle status when required;
-- exposing normalized vehicle information.
+- exposing normalised vehicle information.
 
 ---
 
@@ -324,7 +325,7 @@ This approach allows additional vehicle manufacturers to be supported without mo
 
 Vehicle integrations remain responsible for validating received vehicle information before exposing it to the internal system.
 
-The remaining software components consume normalized vehicle data only.
+The remaining software components consume normalised vehicle data only.
 
 ---
 
@@ -459,6 +460,6 @@ Future revisions may introduce additional interfaces, providers and data models 
 
 New interfaces shall remain consistent with the existing API design philosophy and documented before implementation.
 
-Changes affecting public interfaces shall be documented within the Document History and reviewed before becoming part of a future baseline.
+Changes affecting public interfaces shall be documented within the Document History and reviewed before inclusion in a future baseline.
 
 ---
