@@ -14,6 +14,9 @@
 **Author:** Jack Spaetjens
 
 ---
+
+## Document History
+
 | Version | Date | Author | Description |
 |----------|------------|-----------------|-------------------------------------------------------------|
 | 0.1 | 2026-07-24 | Jack Spaetjens | Initial roadmap structure. |
