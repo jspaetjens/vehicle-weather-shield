@@ -1,18 +1,70 @@
 # Vehicle Weather Shield - Product Backlog
 
-**Version:** 0.1 (Draft)
+**Version:** 1.0
 
-**Status:** Draft
+**Status:** Approved Baseline
 
-**Related Document:** PRD v0.2
+**Related Documents:**
+- 00-Project Overview.md
+- 01-PRD.md
+- 02-Architecture.md
+- 03-Roadmap.md
+- 04-Development.md
+- 05-API.md
+- 06-Testing.md
+- 07-Release.md
+---
+
+# Version History
+
+| Version | Date | Status | Author | Description |
+|---------|------|--------|--------|-------------|
+| 0.1 | 2026-07-28 | Draft | Jack Spaetjens | Initial backlog governance document. |
+| 1.0 | 2026-07-28 | Approved Baseline | Jack Spaetjens | Approved Version 1.0 baseline aligned with the Version 1.0 Documentation Baseline and Azure DevOps backlog governance. |
+
+---
+
+- [Vehicle Weather Shield - Product Backlog](#vehicle-weather-shield---product-backlog)
+- [Version History](#version-history)
+- [Purpose](#purpose)
+- [Source of Truth](#source-of-truth)
+- [Backlog Generation Policy](#backlog-generation-policy)
+- [Theme](#theme)
+  - [Vehicle Weather Shield](#vehicle-weather-shield)
+- [Epic 1 - Weather Intelligence](#epic-1---weather-intelligence)
+  - [Goal](#goal)
+    - [Features](#features)
+    - [PBI - Weather Data Freshness Validation](#pbi---weather-data-freshness-validation)
+- [Epic 2 - Vehicle Integration](#epic-2---vehicle-integration)
+  - [Goal](#goal-1)
+    - [Features](#features-1)
+- [Epic 3 - Notification System](#epic-3---notification-system)
+  - [Goal](#goal-2)
+    - [Features](#features-2)
+- [Epic 4 - Home Assistant Integration](#epic-4---home-assistant-integration)
+  - [Goal](#goal-3)
+    - [Features](#features-3)
+- [Epic 5 - Distribution \& Quality](#epic-5---distribution--quality)
+  - [Goal](#goal-4)
+    - [Features](#features-4)
+- [Epic 6 - Future Platform Expansion](#epic-6---future-platform-expansion)
+  - [Goal](#goal-5)
+    - [Features](#features-5)
+- [Backlog Management Principles](#backlog-management-principles)
+- [Traceability](#traceability)
+
 
 ---
 
 # Purpose
 
-This document describes the logical backlog structure for Vehicle Weather Shield.
+This document defines the logical backlog structure for Vehicle Weather Shield.
 
-It serves as the bridge between the Product Requirements Document (PRD) and the implementation backlog managed in Azure DevOps.
+It defines how the approved Version 1.0 Documentation Baseline is translated into Azure DevOps work items while maintaining full traceability.
+
+The documentation baseline remains the single source of truth for project scope and requirements.
+
+This document defines how those approved requirements are translated into Azure DevOps work items while maintaining full traceability.
 
 The backlog is organized using the following hierarchy:
 
@@ -38,9 +90,37 @@ The structure defined in this document is considered the reference model for Azu
 
 ---
 
+# Source of Truth
+
+The approved Version 1.0 Documentation Baseline is the authoritative source for all Azure DevOps work items.
+
+The backlog shall not introduce new functionality, modify approved requirements, or extend project scope.
+
+Every Azure DevOps work item shall be traceable to one or more approved documentation sections.
+
+---
+
+# Backlog Generation Policy
+
+This document defines the logical structure of the Azure DevOps backlog.
+
+Specific Epics, Features, Product Backlog Items and Tasks are derived from the approved Version 1.0 Documentation Baseline.
+
+They shall not be defined manually in this document unless explicitly approved during backlog planning.
+
+This ensures that the Azure DevOps backlog remains a faithful representation of the approved documentation.
+
+---
+
 # Theme
 
-## Vehicle Weather Protection
+> **Note**
+>
+> The Epic structure shown below represents the logical reference model used during backlog planning.
+>
+> The authoritative Azure DevOps backlog shall be derived directly from the approved Version 1.0 Documentation Baseline and may refine this structure while maintaining full traceability.
+
+## Vehicle Weather Shield
 
 Provide vehicle owners with reliable early warnings that enable them to protect their vehicles against severe weather.
 
@@ -168,9 +248,13 @@ The following principles apply to the backlog:
 
 # Traceability
 
-The backlog is traceable to the following documents:
+The Azure DevOps backlog maintains traceability to the approved Version 1.0 Documentation Baseline, including but not limited to:
 
-- PRD.md
-- Architecture.md
-- CodingStandards.md
-- TestingStrategy.md
+- 00-Project Overview.md
+- 01-PRD.md
+- 02-Architecture.md
+- 03-Roadmap.md
+- 04-Development.md
+- 05-API.md
+- 06-Testing.md
+- 07-Release.md
