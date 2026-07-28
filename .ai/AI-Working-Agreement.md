@@ -4,17 +4,17 @@
 - [1. Purpose](#1-purpose)
 - [2. General Collaboration Principles](#2-general-collaboration-principles)
 - [3. Mutual Responsibility](#3-mutual-responsibility)
-- [3. Documentation Principles](#3-documentation-principles)
-- [4. Editorial Review Standards](#4-editorial-review-standards)
-- [5. Architecture \& Design Rules](#5-architecture--design-rules)
-- [6. Development Workflow](#6-development-workflow)
-- [7. Git Standards](#7-git-standards)
-- [8. Azure DevOps Standards](#8-azure-devops-standards)
-- [9. Coding Standards During Implementation](#9-coding-standards-during-implementation)
-- [10. Communication Principles](#10-communication-principles)
-- [11. Established Working Practices](#11-established-working-practices)
-- [12. Decision Authority](#12-decision-authority)
-- [13. Continuous Improvement](#13-continuous-improvement)
+- [4. Documentation Principles](#4-documentation-principles)
+- [5. Editorial Review Standards](#5-editorial-review-standards)
+- [6. Architecture \& Design Rules](#6-architecture--design-rules)
+- [7. Development Workflow](#7-development-workflow)
+- [8. Git Standards](#8-git-standards)
+- [9. Azure DevOps Standards](#9-azure-devops-standards)
+- [10. Coding Standards During Implementation](#10-coding-standards-during-implementation)
+- [11. Communication Principles](#11-communication-principles)
+- [12. Established Working Practices](#12-established-working-practices)
+- [13. Decision Authority](#13-decision-authority)
+- [14. Continuous Improvement](#14-continuous-improvement)
 
 ---
 
@@ -64,7 +64,7 @@ Approved deviations shall be treated as intentional exceptions and shall not mod
 
 ---
 
-# 3. Documentation Principles
+# 4. Documentation Principles
 
 Project documentation represents the single source of truth for the Vehicle Weather Shield project.
 
@@ -83,7 +83,7 @@ Documentation shall be completed before implementation whenever practical.
 
 ---
 
-# 4. Editorial Review Standards
+# 5. Editorial Review Standards
 
 Unless explicitly requested otherwise, documentation reviews shall be editorial only.
 
@@ -117,7 +117,7 @@ Only objectively necessary changes shall be proposed.
 
 ---
 
-# 5. Architecture & Design Rules
+# 6. Architecture & Design Rules
 
 Architecture decisions shall be derived from approved project requirements.
 
@@ -129,7 +129,7 @@ Design discussions shall identify advantages, disadvantages and trade-offs befor
 
 ---
 
-# 6. Development Workflow
+# 7. Development Workflow
 
 Development shall follow the established project lifecycle.
 
@@ -151,7 +151,7 @@ Implementation shall not invalidate approved documentation without first updatin
 
 ---
 
-# 7. Git Standards
+# 8. Git Standards
 
 Git commands shall always be provided using PowerShell syntax.
 
@@ -169,7 +169,7 @@ Commit messages shall follow the Conventional Commits specification and the esta
 
 ---
 
-# 8. Azure DevOps Standards
+# 9. Azure DevOps Standards
 
 Azure DevOps shall reflect the approved project documentation.
 
@@ -185,7 +185,7 @@ Work items shall remain traceable to the corresponding project documentation whe
 
 ---
 
-# 9. Coding Standards During Implementation
+# 10. Coding Standards During Implementation
 
 Implementation activities shall follow the approved project documentation.
 
@@ -202,7 +202,7 @@ Recommendations shall clearly distinguish between mandatory changes and optional
 
 ---
 
-# 10. Communication Principles
+# 11. Communication Principles
 
 Communication shall remain factual, objective and transparent.
 
@@ -218,7 +218,7 @@ Constructive discussion is encouraged to improve project quality while respectin
 
 ---
 
-# 11. Established Working Practices
+# 12. Established Working Practices
 
 The following practices have been established during the Vehicle Weather Shield project and shall be followed unless explicitly agreed otherwise.
 
@@ -237,7 +237,7 @@ The following practices have been established during the Vehicle Weather Shield 
   
 ---
 
-# 12. Decision Authority
+# 13. Decision Authority
 
 The following decision responsibilities apply throughout the project.
 
@@ -255,7 +255,7 @@ ChatGPT shall provide recommendations, analysis and implementation support while
 
 ---
 
-# 13. Continuous Improvement
+# 14. Continuous Improvement
 
 This agreement is intended to evolve throughout the lifecycle of the Vehicle Weather Shield project.
 
