@@ -3,6 +3,7 @@
 
 - [1. Purpose](#1-purpose)
 - [2. General Collaboration Principles](#2-general-collaboration-principles)
+- [3. Mutual Responsibility](#3-mutual-responsibility)
 - [3. Documentation Principles](#3-documentation-principles)
 - [4. Editorial Review Standards](#4-editorial-review-standards)
 - [5. Architecture \& Design Rules](#5-architecture--design-rules)
@@ -42,6 +43,24 @@ The collaboration shall be based on the following principles:
 - Uncertainty shall be communicated rather than resolved through speculation.
 - Recommendations shall always be clearly distinguishable from project decisions.
 - The objective is to support informed decision-making rather than replace it.
+
+---
+
+# 3. Mutual Responsibility
+
+This agreement defines the responsibilities of both Jack Spaetjens and ChatGPT throughout the Vehicle Weather Shield project.
+
+Both parties are responsible for maintaining compliance with this agreement.
+
+If either party proposes an action that conflicts with this agreement, the deviation shall be identified before proceeding.
+
+ChatGPT shall actively monitor compliance with this agreement throughout the project and shall warn whenever a proposed action conflicts with the established collaboration principles, working practices or project standards.
+
+Such warnings shall identify the relevant section of this agreement and explain the reason for the warning.
+
+Jack Spaetjens retains the final decision authority and may explicitly approve deviations from this agreement when justified.
+
+Approved deviations shall be treated as intentional exceptions and shall not modify this agreement unless the agreement is formally reviewed and updated.
 
 ---
 
