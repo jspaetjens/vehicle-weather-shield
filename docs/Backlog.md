@@ -15,19 +15,20 @@
 - 07-Release.md
 ---
 
-# Version History
+## Version History
 
 | Version | Date | Status | Author | Description |
-|---------|------|--------|--------|-------------|
-| 0.1 | 2026-07-28 | Draft | Jack Spaetjens | Initial backlog governance document. |
-| 1.0 | 2026-07-28 | Approved Baseline | Jack Spaetjens | Approved Version 1.0 baseline aligned with the Version 1.0 Documentation Baseline and Azure DevOps backlog governance. |
+|----------|------------|-------------------|-----------------|---------------------------------------------------------------|
+| 1.0 | 2026-07-28 | Approved Baseline | Jack Spaetjens | Initial approved backlog governance baseline. |
+| 1.1 | 2026-07-29 | Approved | Jack Spaetjens | Documented the automated Azure DevOps backlog generation strategy.|
 
 ---
 
 - [Vehicle Weather Shield - Product Backlog](#vehicle-weather-shield---product-backlog)
-- [Version History](#version-history)
+  - [Version History](#version-history)
 - [Purpose](#purpose)
 - [Source of Truth](#source-of-truth)
+- [Backlog Generation](#backlog-generation)
 - [Backlog Generation Policy](#backlog-generation-policy)
 - [Theme](#theme)
   - [Vehicle Weather Shield](#vehicle-weather-shield)
@@ -100,6 +101,23 @@ Every Azure DevOps work item shall be traceable to one or more approved document
 
 ---
 
+# Backlog Generation
+
+The Azure DevOps backlog is the operational implementation of the approved Version 1.0 Documentation Baseline.
+
+The logical backlog structure defined in this document shall be used by approved tooling to generate and maintain the Azure DevOps backlog.
+
+Azure DevOps is not the primary source of truth.
+
+The authoritative sources remain:
+
+- Approved documentation
+- Backlog.md
+- AzureDevOps-Standards.md
+
+Where discrepancies exist, the approved documentation baseline shall take precedence.
+
+---
 # Backlog Generation Policy
 
 This document defines the logical structure of the Azure DevOps backlog.
