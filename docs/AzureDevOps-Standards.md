@@ -335,7 +335,7 @@ Recommended tags include:
 - Weather
 - Notifications
 
-Tags shall not replace traceability.
+Tags are intended to support filtering and reporting and shall not be used as a substitute for hierarchical relationships or traceability.
 
 ---
 
