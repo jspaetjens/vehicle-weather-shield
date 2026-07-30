@@ -231,7 +231,7 @@ The following practices have been established during the Vehicle Weather Shield 
 - Use exact repository filenames in Git commands.
 - Quote file paths containing spaces.
 - Always provide complete Git workflows.
-- Preserve existing Document History entries and add only the new version entry.
+- Preserve existing Version History entries and add only the new version entry.
 - Ask for clarification instead of making assumptions.
 - Prioritise consistency over stylistic preference.
 - Approved baseline documents shall not be modified directly.
