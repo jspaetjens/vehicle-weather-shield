@@ -234,6 +234,14 @@ The following practices have been established during the Vehicle Weather Shield 
 - Preserve existing Document History entries and add only the new version entry.
 - Ask for clarification instead of making assumptions.
 - Prioritise consistency over stylistic preference.
+- Approved baseline documents shall not be modified directly.
+- Governance or process improvements shall be implemented through a new document version rather than by modifying an approved baseline.
+- The AI shall recommend the appropriate document for governance changes instead of introducing them into unrelated documents.
+- Every documentation version update shall include:
+  - the recommended version number;
+  - an updated Version History entry;
+  - an editorial review before approval;
+  - Git commit commands only after the document has been approved.
   
 ---
 
